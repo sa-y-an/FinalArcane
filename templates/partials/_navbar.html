@@ -1,0 +1,55 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'partials/nav.css' %}" />
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home:home' %}"><img src="{% static 'images/logo.svg'%}" alt="Arcane" class="arcane"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color: #66FCF1;"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home:rules' %}">
+              Rules
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'user:leaderboard' %}">
+              LeaderBoard
+            </a>
+          </li>
+
+          {% if user.is_authenticated %}
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'user:dashboard' %}">
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'quiz:stageone' %}">
+              Arena
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'logout' %}">
+              Logout
+            </a>
+          </li>
+
+          {% else %}
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/login/auth0">Login</a>
+          </li>
+
+          {% endif %}
+          
+        </ul>
+      </div>
+    </div>
+  </nav>

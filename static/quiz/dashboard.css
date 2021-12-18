@@ -1,0 +1,192 @@
+.parent-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+.parent-container .image-container{
+    flex: 1;
+    margin: auto;
+}
+.parent-container .image-container img{
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    max-width: 650px;
+}
+.parent-container .user-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    /* background-color: gold; */
+}
+.parent-container .user-container .user-card{
+    /* background-color: violet; */
+    padding: 30px;
+    /* margin: auto; */
+    border-radius: 18px;
+    background: #202833;
+}
+.parent-container .user-container .user-card .profile-nsr-container{
+    display: flex;
+    /* background-color: firebrick; */
+}
+.parent-container .user-container .user-card .profile-nsr-container .left{
+    /* background-color: #888; */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parent-container .user-container .user-card .profile-nsr-container .left .name{
+    color: #C5C6C8;
+    margin-top: 13px;
+    font-size: 32px;
+    font-weight: 700;
+}
+.parent-container .user-container .user-card .profile-nsr-container .left img{
+    height: 232px;
+    width:  232px;
+    border-radius: 30px;
+    background-blend-mode: color;
+    background-color: #fff;
+   
+}
+.parent-container .user-container .user-card .profile-nsr-container .right{
+    /* background-color: chartreuse; */
+    width: 50%;
+    text-align: center;
+    padding: 15px;
+}
+.parent-container .user-container .user-card .profile-nsr-container .right .special-color{
+    color: #66FCF1;
+    font-size: 3.2rem;
+    font-weight: 600;
+    /* background-color: darkblue; */
+}
+.parent-container .user-container .user-card .profile-nsr-container .right .score{
+    margin-bottom: 28px;
+}
+.parent-container .user-container .user-card .profile-nsr-container .right p{
+    color: #C5C6C8;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 14px;
+}
+.parent-container .user-container .buttons-container{
+    display: flex;
+    /* background: purple; */
+    width: 100%;
+    justify-content: space-between;
+}
+.parent-container .user-container .buttons-container button{
+    background: transparent !important;
+    border-radius: 12px;
+    border: 2px solid #66FCF1;
+    padding: 8px 70px;
+    color: #C5C6C8;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 18px 22px;
+}
+
+/* Dots Css*/
+.top-left{
+    position: absolute;
+    z-index: -1;
+    top: 120px;
+    left: 2px;
+    display: flex;
+    flex-direction: column;
+}
+.top-left svg:first-child{
+    margin-bottom: 40px;
+}
+
+.top-right{
+    position: absolute; 
+    z-index: -1;
+    top: 40px;
+    right: -30px;
+    font-size: 16px;
+    display: flex;
+    overflow: hidden;
+    transform: rotate(180deg)
+}
+.top-right {
+    display: flex;
+}
+.top-right svg{
+    margin-bottom: 40px;
+}
+.bottom-left{
+    position: absolute;
+    bottom: 0px; 
+    left: 170px;
+    z-index: -1;
+}
+.bottom-left svg:first-child{
+    margin-bottom: 30px;
+}
+.bottom-left svg{
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1000px)
+{
+    .dots{
+        display: none;
+    }
+    .parent-container {
+        margin: auto;
+        flex-direction: column-reverse;
+    }
+    .parent-container .image-container img{
+
+        height: auto;
+        max-width: 370px;
+    }
+    .parent-container .user-container .user-card{
+        margin: auto;
+        /* margin-bottom: 300px; */
+    }
+    .parent-container .user-container .user-card .profile-nsr-container .left{
+
+        padding: 15px;
+        width: 50%;
+    }
+    .parent-container .user-container .user-card .profile-nsr-container .left .name{
+        margin-top: 13px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .parent-container .user-container .user-card .profile-nsr-container .left img{
+        height: 132px;
+        width:  132px;  
+    }
+    .parent-container .user-container .user-card .profile-nsr-container .right .special-color{
+        color: #66FCF1;
+        font-size: 1.9rem;
+        font-weight: 600;
+    }
+    .parent-container .user-container .user-card .profile-nsr-container .right .score{
+        margin-bottom: 8px;
+    }
+    .parent-container .user-container .user-card .profile-nsr-container .right p{
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 5px;
+    }
+    .parent-container .user-container .buttons-container{
+        justify-content: space-between;
+    }
+    .parent-container .user-container .buttons-container button{
+        padding: 8px 19px;
+        color: #C5C6C8;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 2px;
+    }
+
+}

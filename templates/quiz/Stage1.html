@@ -1,0 +1,179 @@
+{% extends 'base.html'%} {% load static %} {% block title %}
+<link rel="stylesheet" href="{%static 'quiz/Stage1.css' %}" />
+<title>Arcane Arena</title>
+{% endblock %} {% block content %}
+<style>
+	body {
+		background-image: url("{% static 'images/question/desktop.png' %}");
+		background-size: cover;
+		/* background: black; */
+	}
+	.ques {
+		backdrop-filter: blur(15px);
+	}
+</style>
+<div class="content container d-flex flex-column">
+	<div class="stage1 blocks">
+		<div class="ques-head d-flex">
+			<p>QUESTION {{ question.level }}</p>
+			<div></div>
+		</div>
+
+		<div class="ques">
+			<h3 class="qtitle">{{ question.title }}</h3>
+
+			<div class="ques-content d-flex">
+				<!-- description -->
+				{% if question.description %}
+				<div class="description">{{ question.description|safe }}</div>
+				{% endif %}
+
+				<!-- image -->
+				{% if question.image_url %}
+				<img src="{{ question.image_url }}" alt="{{question.title}}" />
+				{% endif %}
+			</div>
+
+			<div class="">
+				{%if question.format %}
+				<div class="text-secondary">Format - {{question.format}}</div>
+				{% endif %}
+			</div>
+
+			<form action="{% url 'quiz:answer'%}" method="post" id="ans">
+				{% csrf_token %}
+				<!-- {{ form.as_p}} -->
+				<input type="text" name="answer" placeholder="Enter your answer" />
+			</form>
+
+			{% if value %}
+			<div class="wrong">
+				Wrong Answer!
+				<br />
+				Try Again <br />
+				{% if hint %} {% else %}
+				<br />
+				<div class="warning">
+					Stuck ? Take a Hint. <br />
+					(You will loose points)
+				</div>
+				{% endif %}
+			</div>
+			{% endif %}
+
+			<div class="btns d-flex {% if hint %} m-col {% endif %}">
+				{% if hint %}
+				<div class="hint-container">
+					<h3 class="pts">You have lost 5 points.</h3>
+
+					<div class="hint">
+						<!-- <p> -->
+						Hint : {{ question.hint}}
+						<!-- </p> -->
+					</div>
+				</div>
+
+				{% else %}
+				<form action="{% url 'quiz:hint'%}" method="post">
+					{% csrf_token %}
+					<!-- <p>
+                        Stuck ? Take a Hint. ( You will loose points )
+                    </p> -->
+					<button type="submit" class="btn">Hint</button>
+				</form>
+
+				{% endif %}
+
+				<button type="submit" class="btn" form="ans">Submit</button>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+</div>
+
+<!-- <div class="ready" onclick="fullScreen()">
+	<h1>READY?</h1>
+	<h3>Click to continue.</h3>
+</div> -->
+
+<script>
+	if(localStorage.getItem("vid")==null){
+		document.querySelector("#main").style.display = "none";
+
+		const vid = document.createElement("video");
+
+		if(window.innerWidth>=750){
+			vid.src = "https://github.com/sa-y-an/optim/raw/main/video-desktop.mp4";
+		}
+		else{
+			vid.src = "https://github.com/sa-y-an/optim/raw/main/video-mobile.mp4";
+		}
+
+		vid.controls = false;
+		// vid.crossOrigin = "anonymous";
+		document.body.appendChild(vid);
+
+		const bg = document.createElement("div");
+		bg.classList.add("ready");
+
+		const head1 = document.createElement("h1");
+		head1.append(document.createTextNode("READY?"));
+
+		const head3 = document.createElement("h3");
+
+		if(window.innerWidth>=750){
+			head3.append(document.createTextNode("Click to continue..."));
+		}
+		else{
+			head3.append(document.createTextNode("Tap to continue..."));
+		}
+		
+
+		bg.appendChild(head1);
+		bg.appendChild(head3);
+		
+		document.body.appendChild(bg);
+		bg.onclick = fullScreen;
+
+		vid.style.position = "absolute";
+		vid.style.zIndex = "100";
+		vid.style.display = "none";
+		vid.style.height = "100vh";
+		vid.style.width = "100vw";
+
+		vid.onended = function(){
+			document.querySelector("#main").style.display = "block";
+
+			bg.style.display="none";
+			vid.style.display="none";
+
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			} else if (document.webkitExitFullscreen) { /* Safari */
+				document.webkitExitFullscreen();
+			} else if (document.msExitFullscreen) { /* IE11 */
+				document.msExitFullscreen();
+			}
+			localStorage.setItem("vid", 1);
+		}
+
+		function fullScreen(){
+			vid.style.display = "block";
+
+			if (vid.requestFullscreen) {
+				vid.requestFullscreen();
+			} else if (vid.webkitRequestFullscreen) { /* Safari */
+				vid.webkitRequestFullscreen();
+			} else if (vid.msRequestFullscreen) { /* IE11 */
+				vid.msRequestFullscreen();
+			}
+
+			vid.play();
+			vid.controls = false;
+		}
+	}
+</script>
+{% endblock %}

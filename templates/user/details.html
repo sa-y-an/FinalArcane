@@ -1,0 +1,58 @@
+{%extends 'base.html' %} {% load static %} 
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'user/details.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet" />
+<title>Fill contact details</title>
+{% endblock %}
+
+{% block content %}
+<div class="content usercontactblock">
+  <div id="particles-js"></div>
+  <div class="dots dotg1">
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots1" />
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots2" />
+  </div>
+  <div class="dots dotg2">
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots3" />
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots4" />
+  </div>
+  <h2 align="center">
+      Fill your details
+    </h2>
+   
+  <form action="{% url 'user:formdata' %}" method="POST">
+    
+
+    {% csrf_token %} {{ form.as_p }}
+
+    <p>
+      Dont put string in the contact number
+    </p>
+    <br>
+    
+    <div class="buttons">
+      <button type="submit" class="btn">
+        Submit
+      </button>
+    </div>
+  </form>
+
+  
+
+
+  <a href="{% url 'user:dashboard'%}" class="newbtn" style="text-decoration:none;">
+        <button value="Update Contact" class="btn cancel">
+          Cancel
+        </button>
+      </a>
+  <div class="dots dotg3">
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots5" />
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots6" />
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{% static 'user/particles.js' %}"></script>
+
+{% endblock %}

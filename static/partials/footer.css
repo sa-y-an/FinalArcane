@@ -1,0 +1,46 @@
+/* .footer{
+    display:flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    text-align: center;
+    width:100vw;
+    justify-content: space-between;
+    padding: 0px 20px;
+    z-index: 2;
+} */
+.texts{
+    
+    width: auto; 
+}
+.arcane{
+    height:50px;
+    width:auto;
+}
+
+.ieee{
+    height:50px;
+    width:auto;
+}
+
+.clinks{
+    display: flex;
+    justify-content: space-evenly;
+    width:15vw;   
+}
+
+.fab{
+    font-size: 26px;
+    color: #66FCF1;
+}
+
+@media screen and (max-width:700px){
+    .fab{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .ieee, .arcane{
+        height:40px;
+        width:auto;
+    }
+}

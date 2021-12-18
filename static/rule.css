@@ -1,0 +1,317 @@
+.container {
+	width: 100%;
+}
+
+.item1 h2 {
+	font-weight: 700;
+	font-size: 36px;
+	color: #66fcf1;
+	padding-top: 20px;
+	color: #66fcf1;
+	text-align: center;
+	vertical-align: center;
+}
+.item1 p {
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	font-style: bold;
+	vertical-align: top;
+	line-height: 24px;
+}
+
+.item2 {
+	display: none;
+}
+
+.item3 {
+	display: none;
+}
+
+.item4 {
+	padding: 200px 0px 200px 0px;
+}
+.item4 p {
+	color: white;
+	font-size: 18px;
+	font-family: Darker Grotesque;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: left;
+	vertical-align: center;
+}
+
+.item5 {
+	padding: 0px 0px 20px 0px;
+}
+
+.item5 p {
+	color: white;
+	font-size: 18px;
+	font-family: Darker Grotesque;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: right;
+	vertical-align: center;
+}
+
+.item6 {
+	display: none;
+}
+
+.item7 {
+	display: none;
+}
+
+#im3 {
+	display: none;
+}
+
+#im5 {
+	display: none;
+}
+
+#im6 {
+	display: none;
+}
+
+#im7 {
+	display: none;
+}
+
+#im8 {
+	display: none;
+}
+
+#im9 {
+	display: none;
+}
+
+#im10 {
+	display: none;
+}
+
+.item9 {
+	display: block;
+	justify-self: center;
+}
+
+.btn {
+	align-self: center;
+	justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 600px;
+	}
+
+	.item1 h2 {
+		font-size: 42px;
+	}
+	.item1 p {
+		font-size: 25px;
+	}
+
+	.item2 {
+		display: block;
+	}
+
+	#im1 {
+		display: block;
+		width: 400px;
+		padding-bottom: 20px;
+		align-items: center;
+		margin: auto auto 0px auto;
+	}
+
+	#im4 {
+		display: block;
+		width: 150px;
+		padding-bottom: 20px;
+		align-items: center;
+		margin: auto auto auto auto;
+	}
+
+	.item4 {
+		padding: 20px 0px 0px 0px;
+	}
+
+	.item4 p {
+		font-size: 25px;
+	}
+
+	.item5 p {
+		font-size: 25px;
+	}
+
+	.item7 {
+		display: block;
+		justify-self: center;
+		align-self: center;
+	}
+
+	.item9 {
+		display: block;
+		justify-self: center;
+	}
+
+	.btn {
+		align-self: center;
+		justify-self: center;
+	}
+
+	.item3 {
+		display: block;
+	}
+
+	#im2 {
+		display: block;
+		width: 400px;
+		padding-bottom: 20px;
+		align-items: center;
+		margin: auto auto auto auto;
+	}
+
+	#im5 {
+		display: block;
+		width: 40px;
+		padding-bottom: 20px;
+		align-items: center;
+		position: absolute;
+		top: 250px;
+		float: left;
+	}
+
+	#im7 {
+		display: block;
+		width: 40px;
+		padding-bottom: 20px;
+		align-items: center;
+		position: absolute;
+		top: 900px;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.container {
+		width: 1800px;
+		height: 2200px;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 700px 700px 700px 70px;
+	}
+	.item1 h2 {
+		font-size: 72px;
+		text-align: left;
+	}
+
+	.item1 p {
+		font-size: 33px;
+		text-align: left;
+		line-height: 48.82px;
+	}
+
+	.item1 {
+		padding: 230px 0px 100px 0px;
+		margin-left: 30px;
+		float: left;
+		text-align: left;
+		order: 1;
+	}
+
+	.item2 {
+		display: block;
+		order: 2;
+	}
+
+	#im1 {
+		display: block;
+		width: 700px;
+		padding-bottom: 20px;
+		padding-top: 50px;
+		float: right;
+		max-width: 100%;
+		height: auto;
+		align-items: center;
+		position: relative;
+	}
+
+	.item4 {
+		padding: 20px 20px 20px 0px;
+		justify-self: center;
+		align-self: center;
+		order: 4;
+	}
+
+	.item4 p {
+		font-size: 33px;
+		text-align: left;
+		line-height: 49px;
+	}
+
+	.item3 {
+		justify-self: flex-start;
+		align-self: center;
+		order: 3;
+		column-gap: 20px;
+	}
+
+	#im2 {
+		display: block;
+		width: 700px;
+		padding: 20px 30px 20px 0px;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.item5 {
+		padding: 20px 0px 0px 0px;
+		justify-self: center;
+		align-self: center;
+		order: 5;
+	}
+
+	.item5 p {
+		font-size: 33px;
+		text-align: left;
+		line-height: 49px;
+	}
+
+	.item6 {
+		display: block;
+		justify-self: flex-start;
+		align-self: center;
+		order: 6;
+		column-gap: 20px;
+	}
+
+	#im3 {
+		display: block;
+		width: 700px;
+		padding-bottom: 20px;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.item7 {
+		display: block;
+		order: 7;
+	}
+
+	.item9 {
+		order: 8;
+		justify-self: center;
+	}
+
+	#im5 {
+		display: block;
+		width: 40px;
+		padding-bottom: 20px;
+		align-items: center;
+		position: absolute;
+		top: 130px;
+		float: left;
+	}
+}

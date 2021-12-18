@@ -1,0 +1,63 @@
+#main{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.main-container{
+	min-height: 0;
+	overflow: clip;
+}
+
+.robosvg img{
+	width: 100%;
+    transform: scale(1.3);
+    margin: -20% 0 0 0;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 200px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+h3 {
+	font-size: 36px;
+	color: #FFFFFF;
+}
+
+.lostcode {
+	text-align: center;
+	color:#C5C6C8;
+}
+
+a{
+	text-decoration: none;
+}
+
+.btn{
+	font-size: 36px;
+	padding: 10px 20px;
+	margin-top: 5%;
+	background-color: #0B0C10;
+	border: 2px solid #66FCF1;
+	border-radius: 20px;
+	font-size: 24px;
+	color: #C5C6C8;
+}
+button.btn:hover{
+	background-color: #66FCF1;
+}
+
+/* Min-width 1200px */
+@media (max-width: 800px) {
+	h1 {
+		font-size: 72px;
+	}
+	h3, .btn{
+		font-size: 24px;
+	}
+}
+/* end of min-width 1200px */
+
+

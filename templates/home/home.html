@@ -1,0 +1,443 @@
+{% extends 'base.html' %}{% load static %} {% block title%}
+<head>
+	<link rel="stylesheet" href="{% static 'home/home.css' %}" />
+	<title>Arcane | An Epic Quest</title>
+	
+	<meta name="description" content="text"> 
+	<meta property="og:image"                content="{% static 'images/favicon.png' %}" />
+	<meta property="og:type"               content="online treasure hunt" />
+
+	<meta property="og:description"        content="IEEE SB NIT Durgapur is enthralled to present ' Arcane ', an epic quest that will unleash the inner explorer in you into seemingly impenetrable conundrums and unravel the intricate secrets out of the thin air.
+	" />
+
+</head>
+
+
+
+
+{% endblock %} {% block content %}
+<style>
+	.glitch {
+		text-transform: uppercase;
+		position: relative;
+
+		text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+			-0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+			0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+		animation: glitch 500ms infinite;
+	}
+
+	.glitch span {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.glitch span:first-child {
+		animation: glitch 650ms infinite;
+		clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+		transform: translate(-0.025em, -0.0125em);
+		/* color: green; */
+		opacity: 0.8;
+	}
+
+	.glitch span:last-child {
+		animation: glitch 375ms infinite;
+		clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+		transform: translate(0.0125em, 0.025em);
+		/* color: red; */
+		opacity: 0.8;
+	}
+
+	/* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
+
+	@keyframes glitch {
+		0% {
+			text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+				-0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+				-0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+		}
+		14% {
+			text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+				-0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+				-0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+		}
+		15% {
+			text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+				0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+				-0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+		}
+		49% {
+			text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+				0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+				-0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+		}
+		50% {
+			text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+				0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+		}
+		99% {
+			text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+				0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+		}
+		100% {
+			text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+				-0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+				-0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		::before,
+		::after {
+			animation-delay: -1ms !important;
+			animation-duration: 1ms !important;
+			animation-iteration-count: 1 !important;
+			background-attachment: initial !important;
+			scroll-behavior: auto !important;
+			transition-duration: 0s !important;
+			transition-delay: 0s !important;
+		}
+	}
+
+	@import url("https://fonts.googleapis.com/css?family=Carrois+Gothic");
+
+	@font-face {
+		font-family: "matrix-code";
+		src: url("http://neilcarpenter.com/demos/canvas/matrix/font/matrix-code.eot?#iefix")
+				format("embedded-opentype"),
+			url("http://neilcarpenter.com/demos/canvas/matrix/font/matrix-code.woff")
+				format("woff"),
+			url("http://neilcarpenter.com/demos/canvas/matrix/font/matrix-code.ttf")
+				format("truetype"),
+			url("http://neilcarpenter.com/demos/canvas/matrix/font/matrix-code.svg#svgFontName")
+				format("svg");
+	}
+
+	canvas {
+		margin: auto;
+		opacity: 0.3;
+		z-index: -2;
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.cicada {
+		padding: 0;
+		margin: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		opacity: 0.4;
+		z-index: -1;
+		filter: blur(3px);
+	}
+	.first_text {
+		width: 100vw;
+		height: 50vh;
+		margin-top: 10%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	@import "https://fonts.googleapis.com/css?family=Inconsolata";
+	.first_text h2 {
+		margin: 10px;
+		font-weight: bold;
+		font-size: 4.5rem !important;
+		text-align: center;
+		font-family: "Inconsolata", Helvetica, sans-serif;
+		color: rgba(128, 255, 128, 0.8);
+		text-shadow: 0 0 1ex #33ff33, 0 0 2px rgba(255, 255, 255, 0.8);
+	}
+	@media only screen and (min-width: 700px) {
+		/* For large screens: */
+		.first_text {
+			margin-left: -10%;
+		}
+		.first_text h2{
+			font-size: 5.5rem !important;
+		}
+	}
+
+	.shead h3 {
+		margin-top: 110px;
+	}
+	
+	.noise {
+		position: absolute;
+		pointer-events: none;
+		width: 100%;
+		height: 100%;
+		background-image: url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: -1;
+		opacity: 0.02;
+	}
+
+	.overlay {
+		position: absolute;
+		pointer-events: none;
+		width: 100%;
+		height: 90vh;
+		z-index: 1;
+	}
+
+	/* .overlay::before {
+		content: "";
+		pointer-events: none;
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 90vh;
+		background-image: linear-gradient(
+			0deg,
+			transparent 0%,
+			rgba(32, 128, 32, 0.2) 2%,
+			rgba(32, 128, 32, 0.8) 3%,
+			rgba(32, 128, 32, 0.2) 3%,
+			transparent 100%
+		);
+		background-repeat: no-repeat;
+		-webkit-animation: scan 5s linear 0s infinite;
+		animation: scan 5s linear 0s infinite;
+	} */
+
+	@-webkit-keyframes scan {
+		0% {
+			background-position: 0 -100vh;
+		}
+		35%,
+		100% {
+			background-position: 0 100vh;
+		}
+	}
+
+	@keyframes scan {
+		0% {
+			background-position: 0 -100vh;
+		}
+		35%,
+		100% {
+			background-position: 0 100vh;
+		}
+	}
+	.terminal {
+		background: repeating-linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0) 0,
+			rgba(0, 0, 0, 0.3) 50%,
+			rgba(0, 0, 0, 0) 100%
+		);
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-size: 1.2rem;
+		color: rgba(45, 193, 158, 0.8);
+		text-shadow: 0 0 1ex #33ff33, 0 0 2px rgba(255, 255, 255, 0.8);
+		margin: auto;
+		margin-top: 10%;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		height: 100%;
+		width: 90vw;
+		box-sizing: inherit;
+		max-width: 100%;
+		padding: 1.5rem;
+		text-transform: uppercase;
+		z-index: -1;
+	}
+
+	.output {
+		color: #22d8a1;
+		text-shadow: 0 0 1px rgba(51, 255, 51, 0.4),
+			0 0 2px rgba(255, 255, 255, 0.8);
+	}
+
+	.output::before {
+		content: "> ";
+	}
+
+	.errorcode {
+		color: white;
+	}
+</style>
+<div class="container">
+	<canvas id="canvas">Canvas is not supported in your browser.</canvas>
+	<canvas id="canvas2">Canvas is not supported in your browser.</canvas>
+	<section>
+		<picture >
+			<source 
+			class="cicada"
+			   media="(min-width: 600px)"
+			   srcset="{% static 'images/bg-desktop.jpg' %}">
+			<source 
+			class="cicada"
+			   media="(max-width: 600px)"
+			   srcset="{% static 'images/bg-mobile.png' %}">
+			<img class="cicada" src="{% static 'images/bg-desktop.jpg' %}" 
+			alt="cicada bg">
+		 </picture>
+		<div class="first_part">
+			<div class="first_text d-flex flex-column">
+				<h2>ARCANE</h2>
+				<p>
+					Feel the innocent veneer, surprise, the disclosure of a hidden
+					meaning, and the pleasure of solution.
+				</p>
+				<form action="{% url 'quiz:stageone' %}" method="POST">
+					{% csrf_token %}
+					<button class="btn">
+						<h1 class="glitch">
+							<span aria-hidden="true">Play Now</span>
+							Play Now
+							<span aria-hidden="true">Play Now</span>
+						</h1>
+					</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<div class="term">
+		<div class="noise"></div>
+		<div class="overlay"></div>
+		<div class="terminal">
+			<h1>STORY <span class="errorcode">3301</span></h1>
+			<p class="output">
+				This is the year 3301, the secret organisation of Cicada has discovered
+				country Futurama devising to unleash a biological war to become the
+				ultimate ruler of the planet.This will lead to some sort of a
+				<span class="errorcode">“all hell broke loose”</span> situation.
+			</p>
+			<p class="output">
+				The fate of the world is in your hands, for only you can wield your
+				strengths to take over Cicada’s wing and discover the concealed
+				locations of the world’s most inordinate biological weapons. Captivate
+				yourselves in unlocking the course of Cicada’s well known mysteries
+				which in turn lead to the precise passcode to break through the deemed
+				avenues.
+			</p>
+			<p class="output">
+				This would not only prove you worthy enough to become a newly recruited
+				member of the <span class="errorcode">Cicada 3301</span> but also pave the way towards the
+				second round of <span class="errorcode">Arcane</span>, cracking which is imperative to seek the secret
+				chemical formula for the antidote for the virus.
+			</p>
+			<p class="output">
+				Do you have what it takes to vanquish the ensuing apocalypse and emerge
+				as a successful recruit of the Cicada 3301?</br>
+				<span class="errorcode">Stick around and find out.</span>
+			</p>
+		</div>
+	</div>
+	<script>
+		var canvas = document.getElementById("canvas"),
+			ctx = canvas.getContext("2d"),
+			canvas2 = document.getElementById("canvas2"),
+			ctx2 = canvas2.getContext("2d"),
+			// full screen dimensions
+			cw = window.innerWidth,
+			ch = window.innerHeight,
+			charArr = [
+				"a",
+				"b",
+				"c",
+				"d",
+				"e",
+				"f",
+				"g",
+				"h",
+				"i",
+				"j",
+				"k",
+				"l",
+				"m",
+				"n",
+				"o",
+				"p",
+				"q",
+				"r",
+				"s",
+				"t",
+				"u",
+				"v",
+				"w",
+				"x",
+				"y",
+				"z",
+			],
+			maxCharCount = 100,
+			fallingCharArr = [],
+			fontSize = 10,
+			maxColums = cw / fontSize;
+		canvas.width = canvas2.width = cw;
+		canvas.height = canvas2.height = ch;
+
+		function randomInt(min, max) {
+			return Math.floor(Math.random() * (max - min) + min);
+		}
+
+		function randomFloat(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+
+		function Point(x, y) {
+			this.x = x;
+			this.y = y;
+		}
+
+		Point.prototype.draw = function (ctx) {
+			this.value = charArr[randomInt(0, charArr.length - 1)].toUpperCase();
+			this.speed = randomFloat(1, 5);
+
+			ctx2.fillStyle = "rgba(255,255,255,0.6)";
+			ctx2.font = fontSize + "px san-serif";
+			ctx2.fillText(this.value, this.x, this.y);
+
+			ctx.fillStyle = "#20AB9B";
+			ctx.font = fontSize + "px san-serif";
+			ctx.fillText(this.value, this.x, this.y);
+
+			this.y += this.speed;
+			if (this.y > ch) {
+				this.y = randomFloat(-100, 0);
+				this.speed = randomFloat(2, 5);
+			}
+		};
+
+		for (var i = 0; i < maxColums; i++) {
+			fallingCharArr.push(new Point(i * fontSize, randomFloat(-500, 0)));
+		}
+
+		var update = function () {
+			ctx.fillStyle = "rgba(0,0,0,0.05)";
+			ctx.fillRect(0, 0, cw, ch);
+
+			ctx2.clearRect(0, 0, cw, ch);
+
+			var i = fallingCharArr.length;
+
+			while (i--) {
+				fallingCharArr[i].draw(ctx);
+				var v = fallingCharArr[i];
+			}
+
+			requestAnimationFrame(update);
+		};
+
+		update();
+	</script>
+	{% endblock %}

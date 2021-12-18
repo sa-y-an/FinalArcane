@@ -1,0 +1,58 @@
+{% extends 'base.html'%} {% load static %}
+
+{% block title %}
+
+
+<title>
+    Dashboard
+</title>
+<link rel="stylesheet" href="{% static 'user/dashboard.css' %}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div id="dash_bg" alt="Background" ></div>
+
+<div class="content">
+	<div class="box">
+		<div class="img">
+			<img style="opacity: 0.8;" src="{{player.image}}" alt="Profile_Image">
+		</div>
+
+		<div class="writeup" style="margin-left: 5vw;">
+			<h1 class="text-center" style="font-size:3rem;text-transform: uppercase;">
+				{{ player.name }}
+			</h1>
+
+			<div class="details">
+				<ul style="list-style: none;text-transform: uppercase;">
+					<li>
+						Rank - {{ rank }}
+					</li>
+					<li>
+						Score - {{ player.score }}
+					</li>
+				</ul>
+				
+			</div>
+			
+			<div class="btns" >
+				<a href="{% url 'user:formdata'%}">
+					<button class="btn" style="border: 3px solid rgb(24, 204, 204);border-radius: 10px; background-color: none">
+						Profile
+					</button>
+				</a>
+				<a href="{% url 'quiz:stageone' %}">
+					<button class="btn" style="width: 90px; margin-left: 5vw; border: 3px solid rgb(24, 204, 204);border-radius: 10px; background-color: none">
+						Play
+					</button>
+				</a>
+			</div>
+		
+		</div>
+	</div>
+</div>
+
+{%endblock%}

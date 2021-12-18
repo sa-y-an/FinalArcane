@@ -1,0 +1,107 @@
+.ques-head{
+    gap: 20px;
+}
+.ques-head p{
+    font-weight: bold;
+    font-size: 48px;
+}
+.ques-head>div{
+    align-self: center;
+    flex-grow: 1;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #C4C4C44A;
+}
+.ques{
+    border: 7px solid #202833;
+    border-radius: 20px;
+    padding: 25px;
+}
+.ques-content{
+    gap: 10px;
+}
+.ques-content img{
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+}
+button.btn{
+    background-color: #0B0C10;
+    border: 2px solid #66FCF1;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #C5C6C8;
+    padding: 8px 28px;
+}
+button.btn:hover{
+    background-color: #66FCF1;
+}
+.qtitle{
+    font-weight: bold;
+    font-size: 36px;
+}
+.description{
+    width: 50%;
+    font-size: 24px;
+    color: #C5C6C8;
+    display: flex;
+    align-items: center;
+}
+form#ans{
+    gap: 20px;
+    margin-top: 20px;
+}
+form#ans input{
+    font-size: 24px;
+    background-color: #0B0C10;
+    color: #C5C6C8;
+    outline: none;
+    border: 1px solid #66FCF1;
+    border-radius: 10px;
+    width: 50%;
+    padding: 12px 20px;
+}
+.wrong{
+    color: #C5C6C8;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.back button{
+    color: #C5C6C8;
+    margin-top: 20px;
+}
+@media screen and (max-width: 992px) {
+    .ques-content{
+        flex-direction: column-reverse;
+    }
+    .description{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 567px) {
+    .ques-head p{
+        font-size: 36px;
+    }
+    .qtitle{
+        font-size: 24px;
+    }
+    .description{
+        font-size: 18px;
+    }
+    form#ans{
+        flex-direction: column;
+    }
+    form#ans input{
+        width: 100%;
+        font-size: 18px;
+    }
+    form#ans button{
+        width: fit-content;
+    }
+    button.btn{
+        border-radius: 20px;
+        font-size: 18px;
+        padding: 5px 20px;
+    }
+}

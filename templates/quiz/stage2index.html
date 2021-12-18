@@ -1,0 +1,132 @@
+{% extends 'base.html'%} {% load static %} 
+
+{%block title%}
+<link rel="stylesheet" href="{%static 'quiz/stage2index.css' %}">
+<title>Index</title>
+{%endblock%}
+
+{% block content %}
+<h3 align="center">
+    Till Now you have solved {{player.count2}} question{{ player.count2|pluralize}} in Stage 2
+</h3>
+<div class="main">
+    {% for i in q %}
+    <div id="node{{i.level}}" class="node">
+        <a href="{% url 'quiz:individual' i.level %}" class="link-success anim {% for j in player.solved_set.all %}
+        {% if j.level_on == i.level %}
+            {% if j.solved %}
+                done
+            {% else %}
+                visited
+            {% endif %}
+        {% endif %}  
+        {% endfor %}">
+            {{i.level}}
+        </a>
+    </div>
+    {% endfor %}
+
+    <div id="line1" class="line"></div>
+    <div id="line2" class="line"></div>
+    <div id="line3" class="line"></div>
+    <div id="line4" class="line"></div>
+    <div id="line5" class="line"></div>
+    <div id="line6" class="line"></div>
+    <div id="line7" class="line"></div>
+    <div id="line8" class="line"></div>
+    <div id="line9" class="line"></div>
+    <div id="line10" class="line"></div>
+
+    <img src="{%static 'images/cicada-bg.png' %}" alt="">
+</div>
+<div class="s-img anim" id="s-img1">
+    <div class="img-inner">
+        <img src="{%static 'images/cicada1.jpg' %}" alt="">
+    </div>
+</div>
+<div class="s-img anim" id="s-img2">
+    <div class="img-inner">
+        <img src="{%static 'images/cicada2.jpg' %}" alt="">
+    </div>
+</div>
+<div class="s-img anim" id="s-img3">
+    <div class="img-inner">
+        <img src="{%static 'images/cicada3.jpg' %}" alt="">
+    </div>
+</div>
+<div class="s-img anim" id="s-img4">
+    <div class="img-inner">
+    </div>
+</div>
+<script>
+    let lines = document.querySelectorAll(".line");
+    let nodes = document.querySelectorAll(".node a");
+    let img = document.querySelectorAll(".s-img");
+
+    let d=2;
+
+    if(localStorage.getItem("anim")==null){
+        document.querySelector(".main img").style.opacity="0";
+        window.onload=()=>{
+            document.querySelector(".main img").classList.add("anim");
+
+            let c = 1;
+            nodes.forEach(()=>{
+                nodes.forEach((e)=>{
+                    if(e.parentNode.id==`node${c}`){
+                        e.style.transitionDelay = `${d}s`;
+                        e.style.opacity="1";
+                        d+=0.2;
+                        c++;
+                    }
+                })
+            })
+
+            showLines();
+
+            img.forEach((e)=>{
+                e.style.transitionDelay = `${d}s`;
+                e.style.opacity="1";
+            })
+
+            localStorage.setItem("anim", 1);
+        }
+    }
+    else{
+        nodes.forEach((e)=>{
+            e.classList.remove("anim");
+            d=0;
+        })
+
+        document.querySelector(".main img").classList.remove("anim");
+
+        showLines();
+
+        img.forEach((e)=>{
+            e.classList.remove("anim");
+        })
+    }
+
+    function showLines(){
+        lines.forEach((e, i)=>{
+            if(i==lines.length-1){
+                if(document.querySelector(`#node${i+1} a`).classList.contains("done") && document.querySelector(`#node1 a`).classList.contains("done")){
+                    e.style.display="block";
+                    e.style.transitionDelay = `${d}s`;
+                    e.style.opacity = "1";
+                }
+            }
+            else if(document.querySelector(`#node${i+1} a`).classList.contains("done") && document.querySelector(`#node${i+2} a`).classList.contains("done")){
+                e.style.display="block";
+                e.style.transitionDelay = `${d}s`;
+                e.style.opacity = "1";
+                d+=0.2;
+            }
+            else{
+                e.style.display="none";
+                e.style.opacity="0";
+            }
+        })
+    }
+</script>
+{% endblock %}

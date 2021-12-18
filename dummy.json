@@ -1,0 +1,9 @@
+{
+    "SECRET_KEY" : "anything you want",
+    "DEBUG": true,
+    "EMAIL_HOST_USER": "your_email@gmail.com",
+    "EMAIL_HOST_PASSWORD": "email password",
+    "SOCIAL_AUTH_AUTH0_DOMAIN" : "rsdegdbniedbwcnjwjojfew;vm",
+    "SOCIAL_AUTH_AUTH0_KEY" : "kdhoefowefkwkbwghpwuwj;fgh",
+    "SOCIAL_AUTH_AUTH0_SECRET" : "vdfueiuhiwgofxnbtevbzuionebB"
+}

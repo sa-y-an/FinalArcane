@@ -1,0 +1,67 @@
+{% extends 'base.html'%} {% load static %} 
+
+{%block title%}
+<link rel="stylesheet" href="{%static 'quiz/index.css' %}">
+<title>Index</title>
+{%endblock%}
+
+{% block content %}
+<div class="dotss dotgg1">
+  <img src="{% static 'images/Ornament 17.svg'%}" class="dotss1"/>
+  <img src="{% static 'images/Ornament 17.svg'%}" class="dotss2" />
+</div>
+
+<div class="container">
+  
+  <br />
+
+      <div class="h4lite" align="center">
+      Index for Round 2</div>
+      <br />
+      <p align="center">To view or answer a question click on its title</p>
+      <br />
+    <div class="row blockz">
+      <div class="col-2 buttn1"><b>SNo.</b></div>
+      <div class="col-7 buttn2"><font color="black"><b>Questions</b></font></div>
+      <div class="col-3 buttn3"><b>Status</b></div>
+    </div>
+    <br>
+    {% for i in q %}
+    <div class="row blockz">
+      <div class="col-2 buttn4">{{i.level}}</div>
+      <div class="col-7 buttn2">
+        <a href="{% url 'quiz:individual' i.level %}" class="link-light"> {{ i.title }} </a>
+      </div>
+
+      <div class="col-3 buttn5">
+        {% for j in player.solved_set.all %}
+        {% if j.level_on == i.level %}
+             {{j.solved}}
+        {% endif %}  
+      {% endfor %}
+      </div>
+    </div>
+    <br>
+    {% endfor %}
+
+    <br />
+    <div class="dotss dotpos">
+      <img src="{% static 'images/Ornament 17.svg'%}" class="dotss1"/>
+      <img src="{% static 'images/Ornament 17.svg'%}" class="dotss2" />
+    </div>
+    <p align="center"></p>
+<!-- 
+    <p align="center">To view or answer a question click on its title</p> -->
+    <br />
+  </div>
+
+
+    <p align="center">
+      Till Now you have solved {{player.count2}} question{{ player.count2|pluralize}} in Stage 2
+      <br>
+      Note - Status Appears Only if You have visited a question
+    </p>      
+
+</div>
+
+{% endblock %}

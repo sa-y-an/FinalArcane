@@ -1,0 +1,50 @@
+{% extends 'base.html'%} {% load static %} 
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{%static 'quiz/index.css' %}">
+</head>
+<div class="dotss dotgg1 dotposition">
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dotss1"/>
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dotss2" />
+  </div>
+<div>
+    <div class="dotss dotposition2">
+        <img src="{% static 'images/Ornament 17.svg'%}" class="dotss1"/>
+        <img src="{% static 'images/Ornament 17.svg'%}" class="dotss2" />
+      </div>
+    <br>
+</div>
+  <div class="row">
+    <div class="col smth">
+
+        <div class="flow-text over">
+            Game Over
+        </div>
+
+        <div class="textedits">
+            <br>
+            Sorry you did not qualify for Round 2. 
+            <br>
+            But do not worry! This just paves way for diving deeper into mind busters and cryptography. Until next time folks, we have got you covered with more such events to come! 
+            <br>
+            <br>
+            Follow IEEE SB NITD to stay updated.
+        </div>
+    </div>
+
+    <div class="col grid-example s12 m12 l6 textedits">
+        <span class="flow-text bro">
+            <img src="{% static 'images/Feeling sorry-bro.png' %}" alt="Girl in a jacket" width="350px" height="350px">
+        </span>
+    </div>
+    <div class="dotss dotposition3">
+     <div>   <img src="{% static 'images/Ornament 17.svg'%}" class="dotss1"/>
+    </div>
+       <!-- <div> <img src="{% static 'images/Ornament 17.svg'%}" class="dotss2" /></div>
+      </div> -->
+
+</div>
+
+    
+{% endblock %}

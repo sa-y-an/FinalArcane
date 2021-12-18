@@ -1,0 +1,43 @@
+{% extends 'base.html'%} {% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'home/404.css' %}"/>
+<title>404:Page Not Found</title>
+{% endblock %}
+
+{% block content %}
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 robosvg">
+                <img src="{% static 'images/404.svg'%}" alt="404">
+            </div> <!-- end of col -->
+            <div class="col-lg-6">
+                <div class="container block2">
+                    <div class="row">
+                        <div>
+                            <h1>404</h1>
+                        </div>
+                        <div class="lostcode">
+                        <h3>This page was lost in the lines of code.</h3>
+                        <a href="/">
+                            <button type="button" class="btn">Go To Home</button>
+                        </a>
+                    </div>
+                   
+                </div>
+               
+                 
+                    
+              
+                
+            </div> <!-- end of col -->
+            </div> <!-- end of row -->
+           
+                 
+            
+            </div>
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+{% endblock %}

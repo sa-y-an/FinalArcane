@@ -1,0 +1,244 @@
+body
+{
+    background-color: black;
+    /* font-family: 'Segoe UI'; */
+    color: white;
+    font-weight: normal;
+    font-size:x-large;
+}
+.p{
+  font-size: x-large;
+}
+.h4lite{
+/* width: 553px;
+/* height: 100px; */
+/*font-family: Darker Grotesque; */
+font-style:normal;
+color:#46A29F;
+font-weight: bold;
+font-size: 42px;
+/* line-height: 98px; */
+/* display: flex; */
+align-items: center;
+text-align: center;
+/* left: 684px;
+top: 109px; */
+}
+.blockz{
+    
+    background: #46A29F;
+    border-radius: 50px;
+    font-size: x-large;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.buttn1{
+/* width: 249px;
+height: 36px; */
+left: 125px;
+top: 283px;
+font-size: x-large;
+color:black;
+text-align: center;
+background: #C5C6C8;
+opacity: 0.9;
+/* Heading CTA Border */
+
+border: 1px solid #66FCF1;
+box-sizing: border-box;
+border-radius: 50px;
+}
+.buttn2{
+/* width: 1392px;
+height: 36px; */
+font-size: x-large;
+left: 125px;
+top: 283px;
+
+text-align: center;
+
+/* SNSLogo */
+
+background: #46A29F;
+opacity: 0.9;
+/* Heading CTA Border */
+
+box-sizing: border-box;
+
+}
+.buttn3{
+/* width: 1670px;
+height: 36px; */
+left: 125px;
+top: 283px;
+
+font-size: x-large;
+color: black;
+text-align: center;
+
+/* Heading CTA Border */
+
+background: #66FCF1;
+opacity: 0.9;
+/* Heading CTA Border */
+
+border: 1px solid #66FCF1;
+box-sizing: border-box;
+border-radius: 50px;
+}
+.buttn4{
+    /* width: 249px;
+    height: 36px; */
+    left: 125px;
+    top: 283px;
+    font-size: x-large;
+    text-align: center;
+    background: black;
+    color: #46A29F;
+    opacity: 0.9;
+    /* Heading CTA Border */
+    
+    border: 1px solid #66FCF1;
+    box-sizing: border-box;
+    border-radius: 50px;
+    }
+    .buttn5{
+        /* width: 1670px;
+        height: 36px; */
+        left: 125px;
+        top: 283px;
+        
+        font-size: x-large;
+        text-align: center;
+        
+        /* Heading CTA Border */
+        
+        background:black;
+        color: #46A29F;
+        opacity: 0.9;
+        /* Heading CTA Border */
+        
+        border: 1px solid #66FCF1;
+        box-sizing: border-box;
+        border-radius: 50px;
+        }
+/* .btn-group .button {
+    background-color: #4CAF50; /* Green */
+    /* border: 1px solid green;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+  } */ 
+  .design1{
+    width: 60px;
+    height: 260px;
+    left: -83px;
+    top: 213px;
+    
+    transform: rotate(-90deg);
+    
+  }
+  .design2{
+    width: 60px;
+    height: 260px;
+    left: -83px;
+    top: 400px;
+    
+    transform: rotate(-90deg);
+    
+  }
+  .bro{
+    left: 1164px;
+    padding: 10px;
+    align-items: center;
+    right: 1164px;
+    top: 233px;
+    
+  }
+  .over{
+    color: #66FCF1;
+    font-size: 42px ;
+    margin: 10px;
+  }
+  .textedits{
+      margin:10px;
+      font-size: 20px;
+  }
+  .smth{
+padding: 70px;
+  }
+ 
+  .dotss{
+    position:absolute;
+    display:flex;
+    width:8vw;
+    justify-content: space-between;
+  }
+  
+  .dotgg1{
+    align-items: flex-end;
+    /* top:16vw;
+    right: 3vw; */
+    transform: rotate(-90deg);
+    justify-content: space-between;
+  }
+  .dotgg2{
+    position: absolute;
+    /* bottom:5vw; */
+    left: 80vw;
+  }
+  
+  .dotg3{
+    position: relative;
+    top:5vw;
+  }
+  .dotg4{
+    position:relative;
+    top:5vw;
+    left:80vw;
+  }
+  
+  .dotss1,.dotss2,.dots3,.dots4,.dots5,.dots6,.dots7,.dots8{
+    width:3vw;
+    height:auto;
+  }
+  .dotposition{
+    top:2vw;
+    z-index: -1;
+    /* left:80vw; */
+  }
+  .dotposition2{
+    top:2vw;
+    z-index: -1;
+    left:90vw;
+    /* transform: rotate(-90deg); */
+  }
+  .dotposition3{
+    position: absolute;
+    top:30vw;
+    z-index: -1;
+    left:45vw;
+     transform: rotate(-90deg);
+     justify-content: space-between;
+  }
+  .dotgg3{
+    align-items: flex-end;
+    /* top:16vw;
+    right: 3vw; */
+    transform: rotate(-90deg);
+    justify-content: space-between;
+  }
+  .dotpos{
+    left:80vw;
+  }
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: normal;
+    }
+  }

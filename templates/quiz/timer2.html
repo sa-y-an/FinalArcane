@@ -1,0 +1,74 @@
+{% extends 'base.html'%} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'quiz/timer.css' %}" />
+
+<div class="main_container">
+	<div id="particles-js"></div>
+	<div class="dots" id="d1">
+		<img src="/static/images/Ornament 17.svg" class="dotss1" />
+		<img src="/static/images/Ornament 17.svg" class="dotss2" />
+	</div>
+	<div class="dots" id="d2">
+		<img src="/static/images/Ornament 17.svg" class="dotss1" />
+	</div>
+
+	<div class="row container">
+		<div class="col content">
+			<div class="centerBlock mt-40">
+				<div class="row">
+					<p class="text-center m-0 p-0 para">
+						GET READY FOR MOST BRAINSTORMING CHALLENGES
+					</p>
+					<p class="text-center m-0 p-0 para">LET'S SEE WHO CRACKS THE CODE?</p>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						<div class="row">
+							<p id="days" class="countdown"></p>
+						</div>
+						<div class="row">
+							<p class="text-secondary text">days</p>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row">
+							<p id="hours" class="countdown"></p>
+						</div>
+						<div class="row">
+							<p class="text-secondary text">hours</p>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row">
+							<p id="mins" class="countdown"></p>
+						</div>
+						<div class="row">
+							<p class="text-secondary text">minutes</p>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row">
+							<p id="seconds" class="countdown"></p>
+						</div>
+						<div class="row">
+							<p class="text-secondary text">seconds</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col image">
+			<img
+				src="{% static 'images/countdown.svg' %}"
+				class="img-fluid m-auto h-100"
+			/>
+		</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{% static 'user/particles.js' %}"></script>
+<script src="{% static 'quiz/timer.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,141 @@
+canvas {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0.3;
+}
+
+#particles-js {
+  	z-index: -1;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+}
+
+.dots {
+    height: 25vh;
+    position: absolute;
+    display: flex;
+    gap: 30px;
+}
+
+#d1 {
+    top: 50px;
+    left: 10px;
+}
+
+#d2 {
+    bottom: 0px;
+    right: 100px;
+    transform: rotate(90deg);
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    margin-left: 4vw;
+    margin-top: -10vw;
+}
+
+.centerBlock {
+    display: table;
+    margin: auto;
+    margin-top: 30vh;
+}
+
+.para {
+    font-size: 1.5em;
+    color: teal;
+}
+
+.countdown {
+    height: 128px;
+    margin: 0.3em;
+    margin-top: 20px;
+    font-family: Darker Grotesque;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.countdown span {
+    margin: 20%;
+    color: teal;
+}
+
+.image{
+    margin-left: 10vw;
+    margin-right: -10vw;
+}
+
+.text {
+    height: 49px;
+    margin: 0.5em;
+    margin-top: 0;
+    /* Heading Bold 36pt */
+    font-family: Darker Grotesque;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .image,.dots {
+        display: none;
+    }
+
+    .content {
+        width: 80vw;
+        margin: 0 -10vw 0 10vw;
+    }
+
+    .main_container{
+        margin-top: -12vw;
+        margin-bottom: -12vw;
+    }
+
+    .countdown {        
+        margin: 0.3em;
+        font-size: 4rem;        
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .content {
+        width: 100vw;
+        margin-left: 2vw;
+    }
+
+    .main_container{
+        margin-top: -25vw;
+        margin-bottom: -20vw;
+    }
+
+    .countdown {        
+        margin: 0.3em;
+        font-size: 2rem;        
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .para{
+        font-size: 1em;
+    }
+}

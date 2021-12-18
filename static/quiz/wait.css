@@ -1,0 +1,87 @@
+.row{
+    margin: 0 2rem;
+}
+.bro{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+img{
+    max-height: 700px;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+}
+.over{
+    color: #66FCF1;
+    font-size: 62px ;
+    font-weight: 700;
+    margin-top:  120px;
+    margin-left: 70px;
+}
+.textedits{
+    margin:10px;
+    font-size: 28px;
+    margin-left: 73px;
+}
+.smth{
+    padding: 90px;
+}
+
+  
+/* Dots Css*/
+.top-left{
+    position: absolute;
+    z-index: -1;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.top-left svg:first-child{
+    margin-bottom: 40px;
+}
+
+.top-right{
+    position: absolute;
+    z-index: -1;
+    top: 50px;
+    right: -30px;
+    font-size: 16px;
+    display: flex;
+    overflow: hidden;
+    transform: rotate(180deg)
+}
+.top-right {
+    display: flex;
+}
+.top-right svg{
+    margin-bottom: 40px;
+}
+
+@media (max-width: 991px){
+    .dots{
+        display: none;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .col{
+        text-align: center;
+    }
+    .over{
+        margin: 0;
+        font-size: 48px ;
+    }
+    .textedits{
+        margin: 0;
+        font-size: 28px;
+    }
+    .smth{
+        margin: 20px 0;
+        padding: 0px;
+    }  
+    img{
+        max-width: 400px;
+    }
+
+}

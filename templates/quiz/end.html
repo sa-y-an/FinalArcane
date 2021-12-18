@@ -1,0 +1,96 @@
+{% extends 'base.html'%} {% load static %} {% block title %}
+<title>End Game !</title>
+<link rel="stylesheet" href="{%static 'quiz/Stage1.css' %}" />
+{% endblock %} {% block content %}
+<style>
+	body {
+		background-image: url("{% static 'images/question/desktop.png' %}");
+		background-size: cover;
+	}
+	.ques {
+		backdrop-filter: blur(8px);
+	}
+</style>
+<div class="content container d-flex flex-column">
+	<div class="stage1 blocks">
+		<div class="ques-head d-flex">
+			<p>Thanks for playing with us !</p>
+			<div></div>
+		</div>
+
+		<div class="ques">
+			<h3 class="qtitle">End Game</h3>
+
+			<div class="ques-content d-flex">
+				<!-- description -->
+
+				<div class="description">
+					You have been briliant to have come this far, this is your final
+					hurdle, solve it and reach a milestone in this quest. The image is an
+					illusion, a diversion, but not any ordinary one. This diversion will
+					lead you to the path of unravelling the mystery beneath.
+				</div>
+
+				<!-- image -->
+
+				<img src="https://github.com/sa-y-an/optim/raw/main/stage1/notepad_final.jpg" />
+			</div>
+
+			<form action="{% url 'quiz:passcode'%}" method="post" id="ans">
+				{% csrf_token %}
+				<!-- {{ form.as_p}} -->
+				<input type="text" name="answer" placeholder="Enter your answer" />
+			</form>
+
+			{% if check %}
+			<div class="wrong">
+				Wrong Answer!
+				<br />
+				Try Again <br />
+			</div>
+			{% endif %}
+
+			<div class="btns d-flex {% if hint %} m-col {% endif %}">
+				<div class="hint-container">
+					<div class="hint">
+						PS : Notepad can do more than text editing you know !
+					</div>
+				</div>
+
+				<button type="submit" class="btn" form="ans">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function crypto(code) {
+		if (code == "cicada") {
+			console.log(
+				"%c ENIGMAHACK",
+				"font-weight: bold; margin: 25px 0; font-size: 30px; color: #2b80ff; text-shadow: 1px 1px 0 #f4715f , 1px 1px 0 #04b7ce , 1px 1px 0 #057b77"
+			);
+		} else {
+			console.log("Call me with the code you got from decoding the image");
+		}
+	}
+
+	console.log(
+		"%c Congo 🥳!!",
+		"font-weight: bold; margin: 50px 0; font-size: 60px; color: #2b80ff; text-shadow: 3px 3px 0 #f4715f , 6px 6px 0 #04b7ce , 9px 9px 0 #057b77"
+	),
+		console.log(
+			"%c You have been brilliant this far  !!",
+			"font-weight: bold; margin: 25px 0; font-size: 30px; color: #2b80ff; text-shadow: 1px 1px 0 #f4715f , 1px 1px 0 #04b7ce , 1px 1px 0 #057b77"
+		),
+		console.log(
+			"%c Just 1 more step !!",
+			"font-weight: bold; margin: 25px 0; font-size: 30px; color: #2b80ff; text-shadow: 2px 2px 0 #f4715f , 2px 2px 0 #04b7ce , 3px 3px 0 #057b77"
+		),
+		console.log(
+			"%c Hint - call the crypto method to your rescue ",
+			"font-weight: bold; margin: 25px 0; font-size: 20px; color: #3b80ff; text-shadow: 1px 1px 0 #f4715f , 1px 1px 0 #04b7ce , 1px 1px 0 #057b77"
+		);
+</script>
+
+{% endblock %}

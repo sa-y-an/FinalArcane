@@ -1,0 +1,263 @@
+.active{
+  color: #66FCF1;
+}
+
+.active:hover{
+  color:white;
+}
+
+.first_part {
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dots{
+  display:flex;
+  width:8vw;
+  justify-content: space-between;
+  position:relative; 
+}
+
+.dotg1{
+  align-items: flex-end;
+  top:16vw;
+  right: 3vw;
+}
+
+.first_part div h2 {
+    color:#66FCF1;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.first_part div p {
+    color:#FFFFFF;
+    width: 20vw;
+    font-size: 1.6vw;
+    line-height: 2.8vw;
+    font-style: normal;
+}
+
+.gaming_pic {
+    width: 35vw;
+    height: auto;
+}
+
+.btn {
+    color: #C5C6C8;
+    border: 2px solid #66FCF1;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 1.8vw;
+}
+
+.btn:hover {
+    background-color: #66FCF1;
+}
+
+.text {
+  display: block;
+  margin-top: -20px;
+  margin-left: 4px;
+  font-size: 1.5vw;
+  color: #66FCF1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .8;
+}
+
+.shead{
+  display:flex;
+  padding-left: 36.5vw;
+  justify-content: space-between;
+}
+
+.dotg2{
+  position: relative;
+  bottom:5vw;
+}
+
+.dotg3{
+  position: relative;
+  top:5vw;
+}
+
+.spart1,.spart2 {
+  display: flex;
+  justify-content: space-between;
+  margin: -30px 10px;
+}
+
+.story_section h3 {
+  color: #66FCF1;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5vw;
+  font-weight: 450;
+  margin-left:2.5vw;
+}
+
+.coding_pic {
+  width: 40vw;
+  height: 40vw;
+}
+
+.story1 {
+  color: #FFFFFF;
+  font-size: 1.6vw;
+  margin-top: 22vw;
+  text-align: right;
+  line-height: 2.8vw;
+}
+
+.story2 {
+  color: #FFFFFF;
+  font-size: 1.6vw;
+  margin-top: 25vw;
+  text-align: left;
+  line-height: 2.8vw;
+}
+
+.dotg4{
+  position:relative;
+  top:4.5vw;
+  left:80vw;
+}
+
+.dots1,.dots2,.dots3,.dots4,.dots5,.dots6,.dots7,.dots8{
+  width:3vw;
+  height:auto;
+}
+
+.container-chevron{
+	width: 100%;
+  margin-top: -20px;
+	display: flex;
+	padding: 3rem 38vw;
+	flex-direction: column;
+	justify-content: center;
+}
+.container-chevron .wrapper{
+	position: relative;
+	height: 80px;
+	width: 4em;
+	padding: auto;
+	padding-left: 3vw;
+	text-align: center;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #FFFFFF;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@media screen and (max-width: 768px) {
+    .dots{
+        display: none;
+    }
+    .first_part {
+        flex-direction: column;
+        text-align: center;
+    }
+    .first_part div h2 {
+        font-size: 32px;
+    }
+    .btn{
+        padding: 5px 30px;
+    }
+    .first_part div p{
+        width: auto;
+        font-size: 18px;
+        line-height: initial;
+    }
+    .container-chevron{
+        display: none;
+    }
+    .gaming_pic {
+        width: 100%;
+    }
+    .shead{
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    .shead h3{
+        font-size: 36px;
+        font-weight: bold;
+        display: block;
+        margin-left: 0;
+    }
+    .spart1{
+        margin: 0;
+        flex-direction: column-reverse;
+    }
+    .coding_pic{
+        width: auto;
+        height: auto;
+        margin-top: -20%;
+    }
+    .story1, .story2{
+        line-height: initial;
+        margin-top: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+    .spart2{
+        margin: 0;
+        flex-direction: column;
+    }
+}
+
+@keyframes move {
+    25% {
+        opacity: 1;
+
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}

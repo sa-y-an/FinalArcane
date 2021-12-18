@@ -1,0 +1,89 @@
+{% extends 'base.html'%} {% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{%static 'quiz/individual.css' %}">
+<title>
+    Question {{question.level}}
+</title>
+<style>
+    body {
+		background-image: url("{% static 'images/question/desktop.png' %}");
+		background-size: cover;
+		/* background: black; */
+	}
+	.ques {
+		backdrop-filter: blur(15px);
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="content container d-flex flex-column">
+    <div class="stage1 blocks">
+        <div class="ques-head d-flex">
+            <p>
+                QUESTION {{ question.level }}
+            </p>
+            <div></div>
+        </div>
+
+        <div class="ques">
+            <h3 class="qtitle">{{ question.title }}</h3>
+
+            <div class="ques-content d-flex">
+                <!-- description -->
+                {% if question.description %}
+                <div class="description">{{ question.description|safe }}</div>
+                {% endif %}
+
+                <!-- image -->
+                {% if question.image_url %}
+                <img src="{{ question.image_url }}" alt="{{question.title}}" />
+                {% endif %}
+            </div>
+
+            <div class="">
+                {% if question.audio_url %}
+                <audio controls>
+                    <source src="{{question.audio_url}}" type="audio/mpeg">]
+                    
+                    Your browser does not support the audio element.
+                </audio>
+                {% endif %}
+
+                {%if question.format %}
+                <div class= "text-secondary">
+                   Format -  {{question.format}}
+                </div>
+                {% endif %}
+            </div>
+
+            <form action="" method="post" id="ans" class="d-flex justify-content-between">
+                {% csrf_token %} 
+                <!-- {{ form.as_p}} -->
+                <input type="text" name="answer" placeholder="Enter your answer" autofocus>
+                <button type="submit" class="btn">
+                    Submit
+                </button>
+            </form>
+
+
+            {% if value %}
+            <div class="wrong">
+                Wrong Answer!
+                <br/> Try Again <br/>
+            </div>
+            {% endif %}
+        
+        </div>
+        <a href="{% url 'quiz:stageone' %}" class="back"> 
+            <button class="btn">
+                Back
+            </button>
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock %}

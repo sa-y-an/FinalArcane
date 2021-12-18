@@ -1,0 +1,149 @@
+.ques-head{
+    gap: 20px;
+}
+.ques-head p{
+    font-weight: bold;
+    font-size: 48px;
+}
+.ques-head>div{
+    align-self: center;
+    flex-grow: 1;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #C4C4C44A;
+}
+.ques{
+    border: 7px solid #202833;
+    border-radius: 20px;
+    padding: 25px;
+}
+.ques-content{
+    gap: 10px;
+}
+.ques-content img{
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+}
+.ques button{
+    background-color: #0B0C10;
+    border: 2px solid #66FCF1;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #C5C6C8;
+    padding: 8px 28px;
+}
+.ques button:hover{
+    background-color: #66FCF1;
+}
+.qtitle{
+    font-weight: bold;
+    font-size: 36px;
+}
+.description{
+    width: 50%;
+    font-size: 24px;
+    color: #C5C6C8;
+    display: flex;
+    align-items: center;
+}
+form#ans input{
+    font-size: 24px;
+    margin-top: 20px;
+    background-color: #0B0C10;
+    color: #C5C6C8;
+    outline: none;
+    border: 1px solid #66FCF1;
+    border-radius: 10px;
+    width: 50%;
+    padding: 12px 20px;
+}
+.btns{
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+}
+.btns>button{
+    height: fit-content;
+    align-self: flex-end;
+}
+.hint-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.pts{
+    color: #66FCF1;
+    font-size: 24px;
+    font-weight: bold;
+}
+.hint{
+    font-size: 24px;
+    font-weight: bold;
+    color: #C5C6C8;
+}
+.wrong{
+    color: #C5C6C8;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .ques-content{
+        flex-direction: column-reverse;
+    }
+    .description{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 567px) {
+    .ques-head p{
+        font-size: 36px;
+    }
+    .qtitle{
+        font-size: 24px;
+    }
+    .description{
+        font-size: 18px;
+    }
+    form#ans input{
+        width: 100%;
+        font-size: 18px;
+    }
+    .ques button{
+        border-radius: 20px;
+        font-size: 18px;
+        padding: 5px 20px;
+    }
+    .pts{
+        font-size: 18px;
+    }
+    .hint{
+        font-size: 18px;
+    }
+    .m-col{
+        flex-direction: column;
+    }
+}
+
+.ready{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* hide video controls */
+video::-webkit-media-controls {
+    display:none !important;
+  }

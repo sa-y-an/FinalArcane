@@ -1,0 +1,63 @@
+{%extends 'base.html' %} {% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'user/form_status.css' %}" />
+<title>Contact Info 📇</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="content">
+  <div id="particles-js"></div>
+  <br /><br />
+  <div class="dots dotg1">
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots1" />
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots2" />
+  </div>
+  <div class="dots dotg2">
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots3" />
+    <img src="{% static 'images/Ornament 17.svg'%}" class="dots4" />
+  </div>
+
+  <div class="box">
+    <div class="detail-head">
+      <h1>
+        {{details.full_name}}
+      </h1>
+    </div>
+    <br /><br/>
+    <div class="details">
+      <p> College Name: </p>
+      <p class="boxin"> {{details.college}} </p>
+      <p> Year : </p>
+      <p class="boxin"> {{details.year}} </p>
+      <p>Contact no. :</p>
+      <p class="boxin"> {{details.contact}} </p>
+    </div>
+    <br/>
+
+    <div class="submit">
+      <a href="{% url 'user:details'%}">
+        <button value="Update Contact">
+          Update Profile
+        </button>
+      </a>
+      <a href="{% url 'user:dashboard'%}">
+        <button
+          value="Update Contact">
+          Proceed to Dashboard
+        </button>
+      </a>
+    </div>
+
+    <div class="dots dotg3">
+      <img src="{% static 'images/Ornament 17.svg'%}" class="dots5" />
+      <img src="{% static 'images/Ornament 17.svg'%}" class="dots6" />
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{% static 'user/particles.js' %}"></script>
+
+{% endblock %}
