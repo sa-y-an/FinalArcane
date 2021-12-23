@@ -2,25 +2,27 @@
 <head>
 	<link rel="stylesheet" href="{% static 'home/home.css' %}" />
 	<title>Arcane | An Epic Quest</title>
-	
-	<meta name="description" content="text"> 
-	<meta property="og:image"                content="{% static 'images/favicon.png' %}" />
-	<meta property="og:type"               content="online treasure hunt" />
 
-	<meta property="og:description"        content="IEEE SB NIT Durgapur is enthralled to present ' Arcane ', an epic quest that will unleash the inner explorer in you into seemingly impenetrable conundrums and unravel the intricate secrets out of the thin air.
-	" />
+	<meta name="description" content="text" />
+	<meta property="og:image" content="{% static 'images/favicon.png' %}" />
+	<meta property="og:type" content="online treasure hunt" />
 
+	<meta
+		property="og:description"
+		content="IEEE SB NIT Durgapur is enthralled to present ' Arcane ', an epic quest that will unleash the inner explorer in you into seemingly impenetrable conundrums and unravel the intricate secrets out of the thin air.
+	"
+	/>
 </head>
-
-
-
 
 {% endblock %} {% block content %}
 <style>
+	@import url("http://fonts.cdnfonts.com/css/halo");
 
-    @import url('http://fonts.cdnfonts.com/css/halo');
+	@font-face {
+		font-family: halo;
+		src: url("../static/home/Halo.ttf");
+	}
 
-           
 	.glitch {
 		text-transform: uppercase;
 		position: relative;
@@ -140,12 +142,11 @@
 		height: 100vh;
 		opacity: 0.4;
 		z-index: -1;
-		
 	}
 	@media only screen and (min-width: 700px) {
 		/* For large screens: */
-		.cicada{
-			filter : blur(1px) !important;
+		.cicada {
+			filter: blur(1px) !important;
 		}
 	}
 	.first_text {
@@ -156,10 +157,10 @@
 		justify-content: center;
 		align-items: center;
 	}
-	
+
 	@import "https://fonts.googleapis.com/css?family=Inconsolata";
 	.first_text h2 {
-		font-family: 'Halo', sans-serif !important; 
+		font-family: "halo", "Halo", sans-serif !important;
 		margin: 15px;
 		font-weight: bold;
 		font-size: 3.5em !important;
@@ -173,19 +174,18 @@
 		.first_text {
 			margin-left: -5%;
 		}
-		.first_text h2{
+		.first_text h2 {
 			font-size: 5.5em !important;
 		}
 	}
-	.first_part p{
-		color : rgb(217,226,231) !important;
+	.first_part p {
+		color: rgb(217, 226, 231) !important;
 	}
-
 
 	.shead h3 {
 		margin-top: 110px;
 	}
-	
+
 	.noise {
 		position: absolute;
 		pointer-events: none;
@@ -259,7 +259,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		font-size: 1.2rem;
-		color: #66FCF1;
+		color: #66fcf1;
 		text-shadow: 0 0 1ex #33ff33, 0 0 2px rgba(255, 255, 255, 0.8);
 		margin: auto;
 		margin-top: 10%;
@@ -286,28 +286,33 @@
 	}
 
 	.errorcode {
-		color: #66FCF1;
+		color: #66fcf1;
 	}
 </style>
 <div class="container">
 	<canvas id="canvas">Canvas is not supported in your browser.</canvas>
 	<canvas id="canvas2">Canvas is not supported in your browser.</canvas>
 	<section>
-		<picture >
-			<source 
-			class="cicada"
-			   media="(min-width: 600px)"
-			   srcset="{% static 'images/bg-desktop.jpg' %}">
-			<source 
-			class="cicada"
-			   media="(max-width: 600px)"
-			   srcset="{% static 'images/bg-mobile.png' %}">
-			<img class="cicada" src="{% static 'images/bg-desktop.jpg' %}" 
-			alt="cicada bg">
-		 </picture>
+		<picture>
+			<source
+				class="cicada"
+				media="(min-width: 600px)"
+				srcset="{% static 'images/bg-desktop.jpg' %}"
+			/>
+			<source
+				class="cicada"
+				media="(max-width: 600px)"
+				srcset="{% static 'images/bg-mobile.png' %}"
+			/>
+			<img
+				class="cicada"
+				src="{% static 'images/bg-desktop.jpg' %}"
+				alt="cicada bg"
+			/>
+		</picture>
 		<div class="first_part">
 			<div class="first_text d-flex flex-column">
-				<h2>  ARCANE <span class="errorcode">2.0</span></h2>
+				<h2>ARCANE <span class="errorcode">2.0</span></h2>
 				<p>
 					Feel the innocent veneer, surprise, the disclosure of a hidden
 					meaning, and the pleasure of solution.
@@ -331,30 +336,28 @@
 		<div class="overlay"></div>
 		<div class="terminal">
 			<h1>STORY</h1>
+			<hr width="23%" size="2" border-color="#66fcf1" />
 			<p class="output">
-				This is the year 3301, the secret organisation of Cicada has discovered
-				country Futurama devising to unleash a biological war to become the
-				ultimate ruler of the planet.This will lead to some sort of a
-				<span class="errorcode">“all hell broke loose”</span> situation.
+				Yet again, the <span class="errorcode">Green Goblin </span>is at large.
+				The Norman Osborne's alter ego continues to ravage through the city you
+				as he desperately tries to put Spiderman's strength to test.
 			</p>
 			<p class="output">
-				The fate of the world is in your hands, for only you can wield your
-				strengths to take over Cicada’s wing and discover the concealed
-				locations of the world’s most inordinate biological weapons. Captivate
-				yourselves in unlocking the course of Cicada’s well known mysteries
-				which in turn lead to the precise passcode to break through the deemed
-				avenues.
+				You <span class="errorcode">(Peter Parker)</span> and your friends are
+				in grave danger. As the city's
+				<span class="errorcode">only saviour</span>, you are responsible for
+				protecting the people from this rampage.
 			</p>
 			<p class="output">
-				This would not only prove you worthy enough to become a newly recruited
-				member of the <span class="errorcode">Cicada 3301</span> but also pave the way towards the
-				second round of <span class="errorcode">Arcane</span>, cracking which is imperative to seek the secret
-				chemical formula for the antidote for the virus.
+				For that you need to put your spidey senses to test and carefully solve
+				all the underlying questions. For every question that you decipher, you
+				will eventually get closer to Green Goblin's exact location. As soon as
+				you get his location, solve eight questions to
+				<span class="errorcode">activate your power.</span>
 			</p>
 			<p class="output">
-				Do you have what it takes to vanquish the ensuing apocalypse and emerge
-				as a successful recruit of the Cicada 3301?</br>
-				<span class="errorcode">Stick around and find out.</span>
+				Hunt him down and
+				<span class="errorcode">save the city from his evil hands!</span>
 			</p>
 		</div>
 	</div>
@@ -456,3 +459,4 @@
 		update();
 	</script>
 	{% endblock %}
+</div>
