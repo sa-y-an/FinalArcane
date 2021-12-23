@@ -1,6 +1,8 @@
 body {
-    /* background-image: url('../images/question/desktop.png'); */
+    background-image: url('../images/spider2.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
 }
 
@@ -62,7 +64,7 @@ img{
 }
 
 #dash_bg {
-    background-image: url('../images/dash_desktop.png');
+    /* background-image: url('../images/dash.jpg'); */
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -71,7 +73,7 @@ img{
 
 @media only screen and (max-width: 500px) {
     #dash_bg {
-        background-image: url('../images/dash_mobile.png');
+        /* background-image: url('../images/dash_mobile.png'); */
         background-size: cover;
     }
     img{
