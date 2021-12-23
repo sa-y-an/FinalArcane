@@ -1,34 +1,37 @@
 body {
-	/* background-image: url('../images/question/desktop.png'); */
-	background-size: cover;
+    background-image: url('../images/spider2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }
 
-.content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 }
 
-.box {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	background-color: #01313144;
-	backdrop-filter: blur(5px);
-	flex-wrap: wrap;
-	border-radius: 2em;
-	width: 60vw;
-	height: 30vw;
-	margin-top: 5vw;
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #01313144;
+    backdrop-filter: blur(5px);
+    flex-wrap: wrap;
+    border-radius: 2em;
+    width: 60vw;
+    height: 30vw;
+    margin-top: 5vw;
 }
 
-img {
-	height: 40vh;
-	width: 40vh;
-	border-radius: 1em;
+img{
+    height: 40vh;
+    width: 40vh;
+    border-radius: 1em;
 }
 
 /* .writeup {
@@ -42,53 +45,54 @@ img {
     flex-direction: column;
 } */
 
-.details {
-	font-size: 2em;
+.details{
+    font-size: 2em;
 }
 
 .btn {
-	color: rgb(255, 255, 255);
-	padding: 0.5em;
-	font-size: 1.5em;
-	font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+
 }
 
 .btns {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 #dash_bg {
-	background-image: url("../images/bg-desktop.jpg");
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	background-size: cover;
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
 }
 
 @media only screen and (max-width: 500px) {
-	#dash_bg {
-		background-image: url("../images/bg-mobile.jpg");
-		background-size: cover;
-	}
-	img {
-		height: 50vw;
-		width: 50vw;
-		border-radius: 1em;
-	}
-	.box {
-		height: 80vh;
-		width: 80vw;
-	}
-	.writeup {
-		margin-left: 0;
-		margin-top: -18vw;
-	}
-	.btns {
-		margin-left: -20px;
-	}
-	.details {
-		margin-left: -10px;
-	}
+    #dash_bg {
+        /* background-image: url('../images/dash_mobile.png'); */
+        background-size: cover;
+    }
+    img{
+        height: 50vw;
+        width: 50vw;
+        border-radius: 1em;
+    }
+    .box {
+        height: 80vh;
+        width: 80vw;
+    }
+    .writeup {
+        margin-left: 0;
+        margin-top: -18vw;
+    }
+    .btns {
+        margin-left: -20px;
+    }
+    .details {
+        margin-left: -10px;
+    }
 }
