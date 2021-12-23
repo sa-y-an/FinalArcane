@@ -17,6 +17,10 @@
 
 {% endblock %} {% block content %}
 <style>
+
+    @import url('http://fonts.cdnfonts.com/css/halo');
+
+           
 	.glitch {
 		text-transform: uppercase;
 		position: relative;
@@ -136,7 +140,13 @@
 		height: 100vh;
 		opacity: 0.4;
 		z-index: -1;
-		filter: blur(3px);
+		
+	}
+	@media only screen and (min-width: 700px) {
+		/* For large screens: */
+		.cicada{
+			filter : blur(1px) !important;
+		}
 	}
 	.first_text {
 		width: 100vw;
@@ -149,23 +159,28 @@
 	
 	@import "https://fonts.googleapis.com/css?family=Inconsolata";
 	.first_text h2 {
-		margin: 10px;
+		font-family: 'Halo', sans-serif !important; 
+		margin: 15px;
 		font-weight: bold;
-		font-size: 4.5rem !important;
+		font-size: 3.5em !important;
 		text-align: center;
 		font-family: "Inconsolata", Helvetica, sans-serif;
-		color: rgba(128, 255, 128, 0.8);
-		text-shadow: 0 0 1ex #33ff33, 0 0 2px rgba(255, 255, 255, 0.8);
+		color: whitesmoke !important;
+		text-shadow: 0 0 1ex #18d1e2, 0 0 2px rgba(36, 34, 34, 0.8) !important;
 	}
 	@media only screen and (min-width: 700px) {
 		/* For large screens: */
 		.first_text {
-			margin-left: -10%;
+			margin-left: -5%;
 		}
 		.first_text h2{
-			font-size: 5.5rem !important;
+			font-size: 5.5em !important;
 		}
 	}
+	.first_part p{
+		color : rgb(217,226,231) !important;
+	}
+
 
 	.shead h3 {
 		margin-top: 110px;
@@ -244,7 +259,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		font-size: 1.2rem;
-		color: rgba(45, 193, 158, 0.8);
+		color: #66FCF1;
 		text-shadow: 0 0 1ex #33ff33, 0 0 2px rgba(255, 255, 255, 0.8);
 		margin: auto;
 		margin-top: 10%;
@@ -261,7 +276,7 @@
 	}
 
 	.output {
-		color: #22d8a1;
+		color: #c9d4e4;
 		text-shadow: 0 0 1px rgba(51, 255, 51, 0.4),
 			0 0 2px rgba(255, 255, 255, 0.8);
 	}
@@ -271,7 +286,7 @@
 	}
 
 	.errorcode {
-		color: white;
+		color: #66FCF1;
 	}
 </style>
 <div class="container">
@@ -292,7 +307,7 @@
 		 </picture>
 		<div class="first_part">
 			<div class="first_text d-flex flex-column">
-				<h2>ARCANE</h2>
+				<h2>  ARCANE <span class="errorcode">2.0</span></h2>
 				<p>
 					Feel the innocent veneer, surprise, the disclosure of a hidden
 					meaning, and the pleasure of solution.
@@ -315,7 +330,7 @@
 		<div class="noise"></div>
 		<div class="overlay"></div>
 		<div class="terminal">
-			<h1>STORY <span class="errorcode">3301</span></h1>
+			<h1>STORY</h1>
 			<p class="output">
 				This is the year 3301, the secret organisation of Cicada has discovered
 				country Futurama devising to unleash a biological war to become the
