@@ -34,30 +34,28 @@
     <div id="line6" class="line"></div>
     <div id="line7" class="line"></div>
     <div id="line8" class="line"></div>
-    <div id="line9" class="line"></div>
-    <div id="line10" class="line"></div>
 
-    <img src="{%static 'images/cicada-bg.png' %}" alt="">
+    <img src="{%static 'images/spider.png' %}" alt="">
 </div>
 <div class="s-img anim" id="s-img1">
     <div class="img-inner">
-        <img src="{%static 'images/cicada1.jpg' %}" alt="">
+        <img src="{%static 'images/spider_verse.jpg' %}" alt="">
     </div>
 </div>
 <div class="s-img anim" id="s-img2">
     <div class="img-inner">
-        <img src="{%static 'images/cicada2.jpg' %}" alt="">
+        <img src="{%static 'images/spider_verse_2.jpg' %}" alt="">
     </div>
 </div>
 <div class="s-img anim" id="s-img3">
     <div class="img-inner">
-        <img src="{%static 'images/cicada3.jpg' %}" alt="">
+        <img src="{%static 'images/spider_verse_3.jpg' %}" alt="">
     </div>
 </div>
-<div class="s-img anim" id="s-img4">
+<!-- <div class="s-img anim" id="s-img4">
     <div class="img-inner">
     </div>
-</div>
+</div> -->
 <script>
     let lines = document.querySelectorAll(".line");
     let nodes = document.querySelectorAll(".node a");
@@ -109,14 +107,17 @@
 
     function showLines(){
         lines.forEach((e, i)=>{
-            if(i==lines.length-1){
-                if(document.querySelector(`#node${i+1} a`).classList.contains("done") && document.querySelector(`#node1 a`).classList.contains("done")){
-                    e.style.display="block";
-                    e.style.transitionDelay = `${d}s`;
-                    e.style.opacity = "1";
-                }
+            if(i==lines.length-1 &&
+                document.querySelector(`#node${i+1} a`).classList.contains("done") && 
+                document.querySelector(`#node1 a`).classList.contains("done")){
+
+                e.style.display="block";
+                e.style.transitionDelay = `${d}s`;
+                e.style.opacity = "1";
             }
-            else if(document.querySelector(`#node${i+1} a`).classList.contains("done") && document.querySelector(`#node${i+2} a`).classList.contains("done")){
+            else if(document.querySelector(`#node${i+1} a`).classList.contains("done") && 
+                document.querySelector(`#node${i+2} a`).classList.contains("done")){
+
                 e.style.display="block";
                 e.style.transitionDelay = `${d}s`;
                 e.style.opacity = "1";
