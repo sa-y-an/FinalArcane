@@ -1,63 +1,62 @@
 {% extends 'base.html'%} {% load static %} {% block content %}
 <!-- <link rel="stylesheet" href="{% static "rule.css" %}"> -->
 <head>
-  {% block title %}
-  <title>Rules</title>
-  {% endblock %}
+	{% block title %}
+	<title>Rules</title>
+	{% endblock %}
 </head>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,900");
+	@import url("https://fonts.googleapis.com/css?family=Raleway:400,900");
 
-body {
-  background: black;
-  font-family: 'Varela', sans-serif;
-}
+	body {
+		background: black;
+		font-family: "Varela", sans-serif;
+	}
 
-nav{
-  font-family: 'Darker Grotesque';
-}
+	nav {
+		font-family: "Darker Grotesque";
+	}
 
-.item1 h2{
-  font-weight: 700;
-  font-size:36px;
-  color:#66FCF1;
-  padding-top: 20px;
-  color: #66FCF1;
-  text-align: center;
-  vertical-align: center;
-  
-}
-.item1 p{
-  color: white;
-  font-size: 18px;
-  text-align:center;
-  font-style:bold;
-  vertical-align: center;
-  line-height: 24px;
-}
+	.item1 h2 {
+		font-weight: 700;
+		font-size: 36px;
+		color: #66fcf1;
+		padding-top: 20px;
+		color: #66fcf1;
+		text-align: center;
+		vertical-align: center;
+	}
+	.item1 p {
+		color: white;
+		font-size: 18px;
+		text-align: center;
+		font-style: bold;
+		vertical-align: center;
+		line-height: 24px;
+	}
 
+	#im1,
+	#im2,
+	#im3 {
+		width: 700px;
+		padding-bottom: 20px;
+		max-width: 100%;
+		height: auto;
+		align-items: center;
+	}
 
-#im1 ,#im2 , #im3{
-    width: 700px;
-    padding-bottom:20px;
-    max-width: 100%;
-    height: auto;
-    align-items: center;  
-  }
-  
+	#im5 {
+		display: block;
+		width: 40px;
+		padding-bottom: 20px;
+		align-items: center;
+		position: absolute;
+		top: 130px;
+		float: left;
+	}
 
-#im5{
-    display: block;
-    width: 40px;
-    padding-bottom:20px;
-    align-items: center;
-    position:absolute;
-    top:130px;
-    float:left;
-  }
-
-#im7 {
+	#im7 {
 		display: block;
 		width: 40px;
 		padding-bottom: 20px;
@@ -66,7 +65,7 @@ nav{
 		top: 900px;
 		float: left;
 	}
-  #im6 {
+	#im6 {
 		display: block;
 		width: 40px;
 		padding-bottom: 20px;
@@ -76,7 +75,7 @@ nav{
 		float: left;
 	}
 
-.glitch {
+	.glitch {
 		text-transform: uppercase;
 		position: relative;
 
@@ -161,43 +160,43 @@ nav{
 		}
 	}
 
-canvas {
-	display: block;
-	position: fixed;
-	top: 0;
-	left: 0;
-  opacity: 0.7;
-}
+	canvas {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		opacity: 0.7;
+	}
 
-#particles-js {
-  z-index: -1;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-}
+	#particles-js {
+		z-index: -1;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+	}
 
-.item9{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+	.item9 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
 
-.btn {
-    color: #C5C6C8;
-    border: 2px solid #66FCF1;
-    padding: 10px 25px;
-    border-radius: 10px;
-    margin-top: 15px;
-    font-size: 1.8vw;
-    margin-bottom: 50px;
-}
+	.btn {
+		color: #c5c6c8;
+		border: 2px solid #66fcf1;
+		padding: 10px 25px;
+		border-radius: 10px;
+		margin-top: 15px;
+		font-size: 1.8vw;
+		margin-bottom: 50px;
+	}
 
-.btn:hover {
-    background-color: #66FCF1;
-}
-@import "https://fonts.googleapis.com/css?family=Inconsolata";
-	
+	.btn:hover {
+		background-color: #66fcf1;
+	}
+	@import "https://fonts.googleapis.com/css?family=Inconsolata";
+
 	.terminal {
 		background: repeating-linear-gradient(
 			180deg,
@@ -221,9 +220,9 @@ canvas {
 	}
 
 	.output {
-		color:#22d8a1;
+		color: #66fcf1;
 		text-shadow: 0 0 1px rgba(51, 255, 51, 0.4),
-			0 0 2px rgba(255, 255, 255, 0.8) ;
+			0 0 2px rgba(255, 255, 255, 0.8);
 	}
 
 	.output::before {
@@ -234,182 +233,631 @@ canvas {
 		color: white;
 	}
 
+	#wrapper {
+		position: relative;
+		margin-bottom: 10px;
+		height: 300px;
+	}
+
+	#spiderman {
+		-webkit-animation: swinganimation 3.5s infinite alternate;
+		-moz-animation: swinganimation 3.5s infinite alternate;
+		-ms-animation: swinganimation 3.5s infinite alternate;
+		-o-animation: swinganimation 3.5s infinite alternate;
+		animation: swinganimation 3.5s infinite alternate;
+		position: relative;
+		width: 70px;
+		height: 103px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	#spiderman:before {
+		content: " ";
+		position: absolute;
+		width: 0;
+		height: 1000px;
+		left: 50%;
+		bottom: 100%;
+		margin-bottom: -18px;
+		margin-left: -1px;
+		border: solid;
+		border-width: 1px;
+		border-color: white;
+		z-index: 10;
+	}
+	#spiderman .head {
+		-webkit-border-radius: 15px 15px 10px 10px;
+		-moz-border-radius: 15px 15px 10px 10px;
+		-ms-border-radius: 15px 5px 10px 10px;
+		-o-border-radius: 15px 5px 10px 10px;
+		border-radius: 15px 15px 10px 10px;
+		position: absolute;
+		width: 28px;
+		height: 28px;
+		bottom: 5px;
+		left: 50%;
+		margin-left: -14px;
+		background: #ff6d36;
+		border: solid 1px #1b405f;
+		/* Neck */
+	}
+	#spiderman .head:before {
+		content: " ";
+		position: absolute;
+		height: 4px;
+		width: 8px;
+		top: -6px;
+		left: 50%;
+		margin-left: -5px;
+		background: #ff6d36;
+		border: solid 1px #1b405f;
+	}
+	#spiderman .head .ear-left,
+	#spiderman .head .ear-right {
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: 100%;
+		border-style: solid;
+		border-color: #1b405f transparent transparent transparent;
+	}
+	#spiderman .head .ear-left:before,
+	#spiderman .head .ear-right:before {
+		content: " ";
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: -6px;
+		border-style: solid;
+		border-color: #ff6d36 transparent transparent transparent;
+	}
+	#spiderman .head .ear-left {
+		left: -1px;
+		border-width: 6px 8px 0 0;
+	}
+	#spiderman .head .ear-left:before {
+		left: 1px;
+		border-width: 5px 5px 0 0;
+	}
+	#spiderman .head .ear-right {
+		right: -1px;
+		border-width: 6px 0 0 8px;
+	}
+	#spiderman .head .ear-right:before {
+		right: 1px;
+		border-width: 5px 0 0 5px;
+	}
+	#spiderman .head .eye-left,
+	#spiderman .head .eye-right {
+		-webkit-animation: eyesanimation 1s infinite alternate;
+		-moz-animation: eyesanimation 1s infinite alternate;
+		-ms-animation: eyesanimation 1s infinite alternate;
+		-o-animation: eyesanimation 1s infinite alternate;
+		animation: eyesanimation 1s infinite alternate;
+		-moz-border-radius-topleft: 50%;
+		-webkit-border-top-left-radius: 50%;
+		border-top-left-radius: 50%;
+		-moz-border-radius-topright: 50%;
+		-webkit-border-top-right-radius: 50%;
+		border-top-right-radius: 50%;
+		position: absolute;
+		width: 9px;
+		height: 2px;
+		bottom: 9px;
+		background: white;
+		border: solid 1px #1b405f;
+	}
+	#spiderman .head .eye-left {
+		left: 3px;
+	}
+	#spiderman .head .eye-right {
+		right: 3px;
+	}
+	#spiderman .body {
+		position: absolute;
+		width: 32px;
+		height: 34px;
+		top: 34px;
+		left: 50%;
+		margin-left: -16px;
+		background: #336687;
+		border: solid 1px #1b405f;
+		z-index: 2;
+	}
+	#spiderman .body:before {
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: 4px;
+		right: 4px;
+		bottom: 0;
+		background: #ff6d36;
+	}
+	#spiderman .body:after {
+		content: " ";
+		position: absolute;
+		width: 36px;
+		height: 6px;
+		top: -7px;
+		left: 50%;
+		margin-left: -19px;
+		background: #ff6d36;
+		border: solid 1px #1b405f;
+		z-index: 0;
+	}
+	#spiderman .body .spider {
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		position: absolute;
+		width: 4px;
+		height: 10px;
+		left: 50%;
+		bottom: 5px;
+		margin-left: -2px;
+		background: #1b405f;
+	}
+	#spiderman .body .spider:before,
+	#spiderman .body .spider:after {
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		content: " ";
+		position: absolute;
+		width: 10px;
+		height: 12px;
+		left: 50%;
+		margin-left: -6px;
+		border-style: double;
+		border-width: 1px;
+	}
+	#spiderman .body .spider:before {
+		top: 50%;
+		border-color: #1b405f transparent transparent transparent;
+	}
+	#spiderman .body .spider:after {
+		bottom: 50%;
+		border-color: transparent transparent #1b405f transparent;
+	}
+	#spiderman .body .arm-left,
+	#spiderman .body .arm-right {
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		-ms-border-radius: 6px;
+		-o-border-radius: 6px;
+		border-radius: 6px;
+		-webkit-transform-origin: bottom center 0 50%;
+		-moz-transform-origin: bottom center 0 50%;
+		-ms-transform-origin: bottom center 0 50%;
+		-o-transform-origin: bottom center 0 50%;
+		transform-origin: bottom center 0 50%;
+		position: absolute;
+		width: 12px;
+		height: 54px;
+		bottom: -2px;
+		background: #336687;
+		border: solid 1px #1b405f;
+		z-index: 1;
+	}
+	#spiderman .body .arm-left:before,
+	#spiderman .body .arm-right:before {
+		-webkit-border-radius: 6px 6px 0 0;
+		-moz-border-radius: 6px 6px 0 0;
+		-ms-border-radius: 6px 6px 0 0;
+		-o-border-radius: 6px 6px 0 0;
+		border-radius: 6px 6px 0 0;
+		content: " ";
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		right: -1px;
+		bottom: 50%;
+		background: #ff6d36;
+		border: solid 1px #1b405f;
+	}
+	#spiderman .body .arm-left {
+		-webkit-transform: rotate(20deg);
+		-moz-transform: rotate(20deg);
+		-ms-transform: rotate(20deg);
+		-o-transform: rotate(20deg);
+		transform: rotate(20deg);
+		left: -9px;
+		z-index: 2;
+	}
+	#spiderman .body .arm-right {
+		-webkit-transform: rotate(-20deg);
+		-moz-transform: rotate(-20deg);
+		-ms-transform: rotate(-20deg);
+		-o-transform: rotate(-20deg);
+		transform: rotate(-20deg);
+		right: -9px;
+	}
+	#spiderman .legs {
+		-webkit-border-radius: 35px;
+		-moz-border-radius: 35px;
+		-ms-border-radius: 35px;
+		-o-border-radius: 35px;
+		border-radius: 35px;
+		position: absolute;
+		width: 70px;
+		height: 28px;
+		top: 6px;
+		left: 50%;
+		margin-left: -35px;
+		background: transparent;
+		border: solid 10px #1b405f;
+		z-index: 0;
+	}
+	#spiderman .legs:before {
+		-webkit-border-radius: 35px;
+		-moz-border-radius: 35px;
+		-ms-border-radius: 35px;
+		-o-border-radius: 35px;
+		border-radius: 35px;
+		content: " ";
+		position: absolute;
+		width: 52px;
+		height: 10px;
+		top: -9px;
+		left: 50%;
+		margin-left: -34px;
+		background: transparent;
+		border: solid 8px #336687;
+		z-index: 0;
+	}
+	#spiderman .legs .boot-left,
+	#spiderman .legs .boot-right {
+		position: absolute;
+		width: 19px;
+		height: 12px;
+		top: -11px;
+		background: #ff6d36;
+		border: solid 1px #1b405f;
+	}
+	#spiderman .legs .boot-left:before,
+	#spiderman .legs .boot-left:after,
+	#spiderman .legs .boot-right:before,
+	#spiderman .legs .boot-right:after {
+		content: " ";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+	}
+	#spiderman .legs .boot-left {
+		right: 50%;
+		margin-right: 1px;
+	}
+	#spiderman .legs .boot-left:before {
+		top: -7px;
+		right: -1px;
+		border-color: transparent transparent #1b405f transparent;
+		border-width: 0 0 7px 7px;
+	}
+	#spiderman .legs .boot-left:after {
+		top: -5px;
+		right: 0;
+		border-color: transparent transparent #ff6d36 transparent;
+		border-width: 0 0 5px 5px;
+	}
+	#spiderman .legs .boot-right {
+		left: 50%;
+		margin-left: 1px;
+	}
+	#spiderman .legs .boot-right:before {
+		top: -7px;
+		left: -1px;
+		border-color: transparent transparent #1b405f transparent;
+		border-width: 0 7px 7px 0;
+	}
+	#spiderman .legs .boot-right:after {
+		top: -5px;
+		left: 0;
+		border-color: transparent transparent #ff6d36 transparent;
+		border-width: 0 5px 5px 0;
+	}
+
+	@-webkit-keyframes eyesanimation {
+		0% {
+			height: 2px;
+		}
+
+		100% {
+			height: 5px;
+		}
+	}
+
+	@-moz-keyframes eyesanimation {
+		0% {
+			height: 2px;
+		}
+
+		100% {
+			height: 5px;
+		}
+	}
+
+	@-ms-keyframes eyesanimation {
+		0% {
+			height: 2px;
+		}
+
+		100% {
+			height: 5px;
+		}
+	}
+
+	@keyframes eyesanimation {
+		0% {
+			height: 2px;
+		}
+
+		100% {
+			height: 5px;
+		}
+	}
+
+	@-webkit-keyframes swinganimation {
+		0% {
+			-webkit-transform: translateY(-100px);
+			-moz-transform: translateY(-100px);
+			-ms-transform: translateY(-100px);
+			-o-transform: translateY(-100px);
+			transform: translateY(-100px);
+		}
+
+		100% {
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			-ms-transform: translateY(0px);
+			-o-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+	}
+
+	@-moz-keyframes swinganimation {
+		0% {
+			-webkit-transform: translateY(-100px);
+			-moz-transform: translateY(-100px);
+			-ms-transform: translateY(-100px);
+			-o-transform: translateY(-100px);
+			transform: translateY(-100px);
+		}
+
+		100% {
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			-ms-transform: translateY(0px);
+			-o-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+	}
+
+	@-ms-keyframes swinganimation {
+		0% {
+			-webkit-transform: translateY(-100px);
+			-moz-transform: translateY(-100px);
+			-ms-transform: translateY(-100px);
+			-o-transform: translateY(-100px);
+			transform: translateY(-100px);
+		}
+
+		100% {
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			-ms-transform: translateY(0px);
+			-o-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+	}
+
+	@keyframes swinganimation {
+		0% {
+			-webkit-transform: translateY(-100px);
+			-moz-transform: translateY(-100px);
+			-ms-transform: translateY(-100px);
+			-o-transform: translateY(-100px);
+			transform: translateY(-100px);
+		}
+
+		100% {
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			-ms-transform: translateY(0px);
+			-o-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+	}
 </style>
 
-<div class="container"> 
-  <div id="particles-js"></div>
-
-  <div class="row align-items-center">
-    <div class="col-sm item1">
-      <h2 class="glitch" data-text="RULES">Rules</h2> 
-      <p class="glitch">
-        Know the rules,So that you can break them effectively
-      </p>
-    </div>
-  </div>
-
-  
-
-		<div class="terminal">
-			<p class="output">
-				<span class="errorcode">Round 1</span> consists of a total of 7 questions carrying 15 points each.
-			</p>
-			<p class="output">
-        In round 1, you can not skip a question to move forward to the next question.
-			</p>
-			<p class="output">
-				Questions of round 1 will contain hints.
-			<p class="output">
-				Requesting for hints will result in the lowering of points obtainable from that particular question by 5.
-			</p>
-			<p class="output">
-				At the end of round 1 there is a bonus question of 40 marks.
-			</p>			
-			
-      <p class="output">
-				<span class="errorcode">Round 2</span> consists of 10 questions carrying 20 marks each.
-			</p>
-      <p class="output">
-        You can navigate through all questions in round 2. There are no such restrictions as there were in round 1.
-      </p>
-      <p class="output">
-        Answer every question of rounds 1 and 2 in the specified input format only. 
-      </p>
-      <p class="output">
-        The one who has the maximum points at the end of the quiz will be the winner. In case of a tie, the earlier the submission, the higher the ranking.
-      </p>
-   
+<div class="container">
+	<div id="spiderman">
+		<div class="head">
+			<div class="eye-left"></div>
+			<div class="eye-right"></div>
 		</div>
+		<div class="body">
+			<div class="spider"></div>
+			<div class="arm-left"></div>
+			<div class="arm-right"></div>
+		</div>
+		<div class="legs">
+			<div class="boot-left"></div>
+			<div class="boot-right"></div>
+		</div>
+	</div>
 
+	<div id="particles-js"></div>
 
-  <div class="item9">
+	<div class="row align-items-center">
+		<div class="col-sm item1">
+			<h2 class="glitch" data-text="RULES">Rules</h2>
+			<p class="glitch">
+				Know the rules,So that you can break them effectively
+			</p>
+		</div>
+	</div>
 
-    <h2>Good Luck</h2>
-    <h3>3301</h3>
-    <a  href="{% url 'quiz:stageone'  %}">
-      <button
-        class="btn mb1"
-        type="submit"
-        value="Play"
-        class="dare"
-      >
-      <h2 class="glitch">
-        <span aria-hidden="true">Start</span>
-        Start
-        <span aria-hidden="true">Start</span>
-      </h2>
-      </button>
-      </a>
-    
-    </div>
-    
-     
-</div> 
+	<div class="terminal">
+		<p class="output">
+			<span class="errorcode">Round 1</span> consists of a total of 7 questions
+			carrying 15 points each.
+		</p>
+		<p class="output">
+			In round 1, you can not skip a question to move forward to the next
+			question.
+		</p>
+		<p class="output">Questions of round 1 will contain hints.</p>
+
+		<p class="output">
+			Requesting for hints will result in the lowering of points obtainable from
+			that particular question by 5.
+		</p>
+		<p class="output">
+			At the end of round 1 there is a bonus question of 40 marks.
+		</p>
+
+		<p class="output">
+			<span class="errorcode">Round 2</span> consists of 10 questions carrying
+			20 marks each.
+		</p>
+		<p class="output">
+			You can navigate through all questions in round 2. There are no such
+			restrictions as there were in round 1.
+		</p>
+		<p class="output">
+			Answer every question of rounds 1 and 2 in the specified input format
+			only.
+		</p>
+		<p class="output">
+			The one who has the maximum points at the end of the quiz will be the
+			winner. In case of a tie, the earlier the submission, the higher the
+			ranking.
+		</p>
+	</div>
+
+	<div class="item9">
+		<h2>Good Luck</h2>
+		<h5><i> - Tony Stark</i></h5>
+		<a href="{% url 'quiz:stageone'  %}">
+			<button class="btn mb1" type="submit" value="Play" class="dare">
+				<h2 class="glitch">
+					<span aria-hidden="true">Start</span>
+					Start
+					<span aria-hidden="true">Start</span>
+				</h2>
+			</button>
+		</a>
+	</div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS("particles-js", {
-    "particles": {
-        "number": {
-            "value": 40,
-            "density": {
-                "enable": true,
-                "value_area": 500
-            }
-        },
-        "color": {
-            "value": "#085953"
-        },
-        "shape": {
-            "type": "polygon",
-            "stroke": {
-                "width": 2,
-                "color": "#085953"
-            },
-            "polygon": {
-                "nb_sides": 6
-            },
-            "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-            }
-        },
-        "opacity": {
-            "value": 0.5,
-            "random": true
-        },
-        "size": {
-            "value": 10,
-            "random": true
-        },
-        "line_linked": {
-            "enable": true,
-            "distance": 200,
-            "color": "#66fcf1",
-            "opacity": 0.2,
-            "width": 2
-        },
-        "move": {
-            "enable": true,
-            "speed": 5,
-            "direction": "bottom",
-            "random": true,
-            "straight": true,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": [
-                    "grab",
-                    "bubble"
-                ]
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 400,
-                "line_linked": {
-                    "opacity": 0.7
-                }
-            },
-            "bubble": {
-                "distance": 600,
-                "size": 12,
-                "duration": 1,
-                "opacity": 0.8,
-                "speed": 2
-            },
-            "repulse": {
-                "distance": 400,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 20
-            },
-            "remove": {
-                "particles_nb": 10
-            }
-        }
-    },
-    "retina_detect": true
-});
-
+	particlesJS("particles-js", {
+		particles: {
+			number: {
+				value: 40,
+				density: {
+					enable: true,
+					value_area: 500,
+				},
+			},
+			color: {
+				value: "#085953",
+			},
+			shape: {
+				type: "polygon",
+				stroke: {
+					width: 2,
+					color: "#085953",
+				},
+				polygon: {
+					nb_sides: 6,
+				},
+				image: {
+					src: "img/github.svg",
+					width: 100,
+					height: 100,
+				},
+			},
+			opacity: {
+				value: 0.5,
+				random: true,
+			},
+			size: {
+				value: 10,
+				random: true,
+			},
+			line_linked: {
+				enable: true,
+				distance: 200,
+				color: "#66fcf1",
+				opacity: 0.2,
+				width: 2,
+			},
+			move: {
+				enable: true,
+				speed: 5,
+				direction: "bottom",
+				random: true,
+				straight: true,
+				out_mode: "out",
+				bounce: false,
+				attract: {
+					enable: false,
+					rotateX: 600,
+					rotateY: 1200,
+				},
+			},
+		},
+		interactivity: {
+			detect_on: "canvas",
+			events: {
+				onhover: {
+					enable: true,
+					mode: ["grab", "bubble"],
+				},
+				onclick: {
+					enable: true,
+					mode: "push",
+				},
+				resize: true,
+			},
+			modes: {
+				grab: {
+					distance: 400,
+					line_linked: {
+						opacity: 0.7,
+					},
+				},
+				bubble: {
+					distance: 600,
+					size: 12,
+					duration: 1,
+					opacity: 0.8,
+					speed: 2,
+				},
+				repulse: {
+					distance: 400,
+					duration: 0.4,
+				},
+				push: {
+					particles_nb: 20,
+				},
+				remove: {
+					particles_nb: 10,
+				},
+			},
+		},
+		retina_detect: true,
+	});
 </script>
 
 {% endblock %}
