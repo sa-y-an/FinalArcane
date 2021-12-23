@@ -11,6 +11,10 @@ canvas {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
+    background: url('../images/count.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .dots {
@@ -35,6 +39,7 @@ canvas {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .content {
@@ -50,7 +55,7 @@ canvas {
 
 .para {
     font-size: 1.5em;
-    color: teal;
+    color: rgb(215, 238, 238);
 }
 
 .countdown {
