@@ -28,9 +28,9 @@ now = datetime.utcnow()+timedelta(hours=5.5)
 #Start
 quiz = datetime(2021, 12, 25, 15, 0, 0)       
 # First Round Ends
-firstend = datetime(2022, 12, 26, 6, 0, 0)
+firstend = datetime(2021, 12, 26, 2, 0, 0)
 # Second Round Ends
-end = datetime(2022, 12, 26, 18, 0, 0)
+end = datetime(2021, 12, 26, 15, 0, 0)
 
 
 
@@ -70,12 +70,11 @@ def StageOne(request):
         print('end ' + str(end))
         return render(request, 'quiz/timer.html', {"end": end})
 
-    # this is for first round ends but couldnt make to round 2
+
     if firstend < now and player.level2 < 0:
         return render(request, 'quiz/disqualified.html')
 
     
-
     else:
         print('quiz on')
         if player.level2 < -1:
@@ -101,7 +100,7 @@ def StageOne(request):
         if player.level2 == -1:
             return render(request, 'quiz/wait.html')
 
-        if player.level2 > -1:
+        if player.level2 > -1 and now > firstend:
             q = StageTwo.objects.all()
             player = get_object_or_404(Player, user=request.user)
             if (player.count2 < StageTwo.objects.count()):
