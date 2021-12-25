@@ -26,11 +26,12 @@ now = datetime.utcnow()+timedelta(hours=5.5)
 
 
 #Start
-quiz = datetime(2021, 12, 23, 15, 0, 0)       
+quiz = datetime(2021, 10, 23, 19, 0, 0)       
 # First Round Ends
-firstend = datetime(2022, 12, 26, 4, 0, 0)
+firstend = datetime(2022, 10, 24, 19, 0, 0)
 # Second Round Ends
-end = datetime(2021, 12, 28, 15, 0, 0)
+end = datetime(2022, 10, 25, 23, 59, 59)
+
 
 
 
