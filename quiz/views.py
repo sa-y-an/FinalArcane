@@ -238,6 +238,12 @@ def Index(request):
 @login_required(login_url='/login/auth0', redirect_field_name=None)
 def Passcode(request):
 
+    player = get_object_or_404(Player, user=request.user)
+
+    if player.level2 == -1  :
+        return render(request, "quiz/wait.html")
+
+
     now = datetime.utcnow()+timedelta(hours=5.5)
 
     # the end of the quiz
@@ -254,7 +260,7 @@ def Passcode(request):
             ans = my_form.cleaned_data.get("answer")
 
             if (str(ans).lower() == str(code).lower()):
-                player = get_object_or_404(Player, user=request.user)
+                
                 player.level2 = -1
                 player.score += 40
                 player.last_submit = timezone.now()
