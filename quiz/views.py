@@ -30,7 +30,7 @@ quiz = datetime(2021, 12, 25, 15, 0, 0)
 # First Round Ends
 firstend = datetime(2021, 12, 25, 2, 0, 0)
 # Second Round Ends
-end = datetime(2021, 12, 25, 15, 0, 0)
+end = datetime(2021, 12, 28, 15, 0, 0)
 
 
 
