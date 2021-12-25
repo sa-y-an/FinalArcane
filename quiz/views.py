@@ -34,7 +34,6 @@ end = datetime(2022, 10, 25, 23, 59, 59)
 
 
 
-
 @login_required(login_url='/login/auth0', redirect_field_name=None)
 def Algo(request):
     if request.method == "POST":
@@ -71,11 +70,12 @@ def StageOne(request):
         print('end ' + str(end))
         return render(request, 'quiz/timer.html', {"end": end})
 
-
+    # this is for first round ends but couldnt make to round 2
     if firstend < now and player.level2 < 0:
         return render(request, 'quiz/disqualified.html')
 
     
+
     else:
         print('quiz on')
         if player.level2 < -1:
@@ -101,7 +101,7 @@ def StageOne(request):
         if player.level2 == -1:
             return render(request, 'quiz/wait.html')
 
-        if player.level2 > -1 and now > firstend:
+        if player.level2 > -1:
             q = StageTwo.objects.all()
             player = get_object_or_404(Player, user=request.user)
             if (player.count2 < StageTwo.objects.count()):
