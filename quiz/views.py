@@ -16,7 +16,7 @@ question1 = Stage_1.objects.all()
 
 # time variables
 
-now = datetime.utcnow()+timedelta(hours=5.5)
+
 
 
 # Set the Date Time Here
@@ -28,7 +28,7 @@ now = datetime.utcnow()+timedelta(hours=5.5)
 #Start
 quiz = datetime(2021, 12, 25, 15, 0, 0)       
 # First Round Ends
-firstend = datetime(2021, 12, 26, 2, 0, 0)
+firstend = datetime(2021, 12, 26, 0, 0, 0)
 # Second Round Ends
 end = datetime(2021, 12, 26, 15, 0, 0)
 
@@ -52,6 +52,10 @@ def Algo(request):
 def StageOne(request):
     ''' Set the date time as class datetime.datetime
     (year, month, day, hour=0, minute=0, second=0, microsecond=0, tzinfo=None, *, fold=0)'''
+
+    print("now", end=", ")
+    now = datetime.utcnow()+timedelta(hours=5.5)
+    print(now)
 
     # sanity check
     try : 
@@ -112,6 +116,7 @@ def StageOne(request):
 @login_required(login_url='/login/auth0', redirect_field_name=None)
 def Stage1Hint(request):
     # the end of the quiz
+    now = datetime.utcnow()+timedelta(hours=5.5)
     if (now > end):
         print('end ' + str(end))
         return render(request, 'quiz/timer.html', {"end": end})
@@ -137,6 +142,7 @@ def Stage1Hint(request):
 def Stage1Answer(request):
 
         # the end of the quiz
+    now = datetime.utcnow()+timedelta(hours=5.5)
     if (now > end):
         print('end ' + str(end))
         return render(request, 'quiz/timer.html', {"end": end})
@@ -214,6 +220,7 @@ def Stage1Answer(request):
 def Index(request):
 
     # the end of the quiz
+    now = datetime.utcnow()+timedelta(hours=5.5)
     if (now > end):
         print('end ' + str(end))
         return render(request, 'quiz/timer.html', {"end": end})
@@ -235,6 +242,7 @@ def Index(request):
 @login_required(login_url='/login/auth0', redirect_field_name=None)
 def Passcode(request):
 
+    now = datetime.utcnow()+timedelta(hours=5.5)
 
     # the end of the quiz
     if (now > end):
@@ -281,6 +289,8 @@ def Passcode(request):
 @login_required(login_url='/login/auth0', redirect_field_name=None)
 def Individual(request, qid):
     '''View for stage 2'''
+
+    now = datetime.utcnow()+timedelta(hours=5.5)
 
     # the end of the quiz
     if (now > end):
