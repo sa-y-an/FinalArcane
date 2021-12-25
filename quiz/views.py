@@ -14,10 +14,6 @@ hintValue = False
 hintButton = True
 question1 = Stage_1.objects.all()
 
-# time variables
-
-
-
 
 # Set the Date Time Here
 
