@@ -197,18 +197,9 @@ def count(request) :
 
 
 
-@staff_member_required
 def checkboard(request):
-    global current_leaderboard
+    
+    details = models.Player.objects.order_by(
+        '-score', 'last_submit').select_related('playerdetails')[:10]
 
-    current_leaderboard = models.Player.objects.order_by(
-        '-score', 'last_submit')
-
-    leader = models.Player.objects.order_by(
-        '-score', 'last_submit')[:1]
-
-    print(type(leader[0].last_submit))
-
-    n = models.Player.objects.count()
-
-    return render(request, 'user/check.html', {'leaderboard': current_leaderboard, 'leader': leader, 'n': n})
+    return render(request, 'user/check.html', {"details":details})

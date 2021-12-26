@@ -17,16 +17,16 @@
          
             <th scope="col">Name </th>
             <th scope="col">Score</th>
-            <th scope="col">Last Submit</th>
+            <th scope="col">Phone Number</th>
           </tr>
         </thead>
         <tbody>
-            {% for player in leaderboard %}
+            {% for player in details %}
           <tr>
           
             <td>{{player.name}}</td>
             <td>{{player.score}}</td>
-            <td>{{player.last_submit.time}}</td>
+            <td>{{player.playerdetails.contact}}</td>
           </tr>
 
           {% endfor %}
