@@ -18,6 +18,8 @@
             <th scope="col">Name </th>
             <th scope="col">Score</th>
             <th scope="col">Phone Number</th>
+            <th scope="col">Emails</th>
+
           </tr>
         </thead>
         <tbody>
@@ -27,6 +29,7 @@
             <td>{{player.name}}</td>
             <td>{{player.score}}</td>
             <td>{{player.playerdetails.contact}}</td>
+            <td>{{player.email}}</td>
           </tr>
 
           {% endfor %}
