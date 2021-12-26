@@ -355,13 +355,20 @@ def Individual(request, qid):
                             return HttpResponse('<h2> Your Form Data was Invalid </h2>')
                             # invalid form data submitted by tampering with developer console
 
-        if (flag == False):  # the player didnot visited the question before
+        if (flag == False):  # the player didnot visit the question before
             # creates a Solved object with level_on = question level and solved set to False
             player.solved_set.create(level_on=qid, solved=False)
 
             if request.method == "GET":
                 my_form = UserAnswer
                 return render(request, 'quiz/individual.html', {"question": question, "form": my_form, "all": all})
+
+
+            # this method is wrong maybe, as it increments the score by 5 
+            # also its redundant as none can send a post request without visiting
+
+            # redundant code
+
             if request.method == "POST":
                 my_form = UserAnswer(request.POST)
                 if my_form.is_valid():
@@ -369,7 +376,10 @@ def Individual(request, qid):
                     organs = get_object_or_404(StageTwo, level=qid).answer
                     # if the player succesfully solves the question
                     if (str(organs).lower() == str(ans).lower()):
-                        player.score += 5
+                        player.score += 5 # this part is shady
+                        # not sure what it does
+
+
                         player.last_submit = timezone.now()
                         player.count2 += 1          # count of solved questions
                         i = player.solved_set.get(level_on=qid)
