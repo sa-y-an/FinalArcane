@@ -86,7 +86,7 @@ def save_profile(backend, user, response, *args, **kwargs):
             player.save()
 
 
-# @login_required(login_url='/login', redirect_field_name=None)
+#@login_required(login_url='/login', redirect_field_name=None)
 def leaderboard(request):
     global current_leaderboard
 
@@ -183,20 +183,19 @@ def psave(request) :
         p.email = user_data['email']
         p.save()
 
-        messages.success(request, 'Account was created for ' + user.username)
-
     context = {
         "form": my_form
     }
     return render(request, "user/details.html", context)
-    
+
+
+@staff_member_required
 def count(request) :
     p = models.Player.objects.count()
-    p -= 30
     return HttpResponse("<h1> Participant Count - {} <h1>".format(p))
 
 
-
+@staff_member_required
 def checkboard(request):
     
     details = models.Player.objects.order_by(
