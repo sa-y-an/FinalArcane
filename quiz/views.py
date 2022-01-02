@@ -24,9 +24,9 @@ question1 = Stage_1.objects.all()
 #Start
 quiz = datetime(2021, 12, 25, 15, 0, 0)       
 # First Round Ends
-firstend = datetime(2021, 12, 26, 0, 0, 0)
+firstend = datetime(2022, 12, 26, 0, 0, 0)
 # Second Round Ends
-end = datetime(2021, 12, 26, 15, 0, 0)
+end = datetime(2022, 12, 26, 15, 0, 0)
 
 
 
